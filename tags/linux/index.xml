@@ -208,8 +208,8 @@ so i had to paste it line by line&amp;hellip; :/&lt;/p&gt;
 &lt;h1 id=&#34;2-installing-armbian&#34;&gt;2. installing armbian&lt;/h1&gt;
 
 &lt;p&gt;after you upgraded the bootloader, get your armbian image.
-download the version you want (from here &lt;a href=&#34;http://wiki.espressobin.net/tiki-index.php?page=Serial+connection+-+Linux&#34;&gt;http://wiki.espressobin.net/tiki-index.php?page=Serial+connection+-+Linux&lt;/a&gt;)
-unpack it, and dd the file to your sd card.&lt;/p&gt;
+download the version you want (from &lt;a href=&#34;https://www.armbian.com/espressobin/&#34;&gt;armbian.com/espressobin&lt;/a&gt;)
+unpack it, and dd the file to your sd card:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo dd &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;Desktop/Armbian_XYZ.img &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;of&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;/dev/sdX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;flashing will probably take a few minutes. grab a coffee. :)&lt;/p&gt;
 
