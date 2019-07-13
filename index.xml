@@ -12,26 +12,26 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>RSS | ?</title>
-          <link rel="stylesheet" href="https://puhoy.github.io.com/css/base.min.a41b4fb7d4627ef13426f7f1bd5ebc6df8a951eea117a46e72ac2b4b0747216a.css" integrity="sha256-pBtPt9RifvE0JvfxvV68bfipUe6hF6RucqwrSwdHIWo=" />
+          <link rel="stylesheet" href="https://puhoy.github.io/css/base.min.a41b4fb7d4627ef13426f7f1bd5ebc6df8a951eea117a46e72ac2b4b0747216a.css" integrity="sha256-pBtPt9RifvE0JvfxvV68bfipUe6hF6RucqwrSwdHIWo=" />
         </head>
         <body>
           <nav class="u-background">
   <div class="u-wrapper">
     <ul class="Banner">
       <li class="Banner-item Banner-item--title">
-        <a class="Banner-link u-clickable" href="https://puhoy.github.io.com">?</a>
+        <a class="Banner-link u-clickable" href="https://puhoy.github.io">?</a>
       </li>
       
       <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="https://puhoy.github.io.com/posts/">posts</a>
+        <a class="Banner-link u-clickable" href="https://puhoy.github.io/posts/">posts</a>
       </li>
       
       <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="https://puhoy.github.io.com/tags/">tags</a>
+        <a class="Banner-link u-clickable" href="https://puhoy.github.io/tags/">tags</a>
       </li>
       
       <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="https://puhoy.github.io.com/index.xml">rss</a>
+        <a class="Banner-link u-clickable" href="https://puhoy.github.io/index.xml">rss</a>
       </li>
       
     </ul>
@@ -42,7 +42,7 @@
               <div class="u-padding">
                 <h2 class="Heading-title">
                   
-                  <a class="Heading-link u-clickable" href="https://puhoy.github.io.com/index.xml" rel="bookmark">RSS</a>
+                  <a class="Heading-link u-clickable" href="https://puhoy.github.io/index.xml" rel="bookmark">RSS</a>
                   
                 </h2>
                 
@@ -68,16 +68,16 @@
   </xsl:stylesheet>
   <channel>
     <title>?</title>
-    <link>https://puhoy.github.io.com/</link>
+    <link>https://puhoy.github.io/</link>
     <description>Recent content on ?</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 11 Jul 2019 14:46:02 +0200</lastBuildDate>
-    <atom:link href="https://puhoy.github.io.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://puhoy.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>installing armbian on espressobin</title>
-      <link>https://puhoy.github.io.com/posts/armbian_on_espressobin/</link>
+      <link>https://puhoy.github.io/posts/armbian_on_espressobin/</link>
       <pubDate>Thu, 11 Jul 2019 14:46:02 +0200</pubDate>
-      <guid>https://puhoy.github.io.com/posts/armbian_on_espressobin/</guid>
+      <guid>https://puhoy.github.io/posts/armbian_on_espressobin/</guid>
       <description>
 
 &lt;p&gt;how to install &lt;a href=&#34;https://www.armbian.com/espressobin/&#34;&gt;armbian&lt;/a&gt; on espressobin&lt;/p&gt;
