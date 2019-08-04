@@ -11,15 +11,19 @@
       <html lang="">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>linux RSS | ?</title>
-          <link rel="stylesheet" href="//puhoy.github.io/css/base.min.a41b4fb7d4627ef13426f7f1bd5ebc6df8a951eea117a46e72ac2b4b0747216a.css" integrity="sha256-pBtPt9RifvE0JvfxvV68bfipUe6hF6RucqwrSwdHIWo=" />
+          <title>linux RSS | &lt;-</title>
+          <link rel="stylesheet" href="//puhoy.github.io/css/base.min.e24230f1f5eed9386729595ee5b1ddc4bc51f07d4d622d31d1f616d9ec32d451.css" integrity="sha256-4kIw8fXu2ThnKVle5bHdxLxR8H1NYi0x0fYW2ewy1FE=" />
         </head>
         <body>
           <nav class="u-background">
   <div class="u-wrapper">
     <ul class="Banner">
       <li class="Banner-item Banner-item--title">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io">?</a>
+        <a class="Banner-link u-clickable" href="//puhoy.github.io">&lt;-</a>
+      </li>
+      
+      <li class="Banner-item">
+        <a class="Banner-link u-clickable" href="//puhoy.github.io/about/">about</a>
       </li>
       
       <li class="Banner-item">
@@ -67,9 +71,9 @@
     </xsl:template>
   </xsl:stylesheet>
   <channel>
-    <title>linux on ?</title>
+    <title>linux on &lt;-</title>
     <link>//puhoy.github.io/tags/linux/</link>
-    <description>Recent content in linux on ?</description>
+    <description>Recent content in linux on &lt;-</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 11 Jul 2019 14:46:02 +0200</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
