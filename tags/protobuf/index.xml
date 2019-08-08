@@ -144,7 +144,7 @@ DISCOVERY_MAGIC &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;spa
 &lt;ul&gt;
 &lt;li&gt;a random instance id (generated at startup),&lt;/li&gt;
 &lt;li&gt;a list of addresses where the instance can be found,&lt;/li&gt;
-&lt;li&gt;and the syncthing id, which is the key id of the SHA-256 certificate of this installation.&lt;/li&gt;
+&lt;li&gt;and the syncthing id, which is the SHA-256 of the devices X.509 certificate.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;more&#34;&gt;more..&lt;/h2&gt;
