@@ -5,19 +5,6 @@
   <url>
     <loc>//puhoy.github.io/</loc>
     <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//puhoy.github.io/posts/</loc>
-    <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//puhoy.github.io/tags/</loc>
-    <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -26,39 +13,43 @@
   </url>
   
   <url>
+    <loc>//puhoy.github.io/posts/</loc>
+    <lastmod>2019-08-03T18:47:54+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//puhoy.github.io/tags/protobuf/</loc>
     <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//puhoy.github.io/tags/snippets/</loc>
     <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//puhoy.github.io/tags/syncthing/</loc>
     <lastmod>2019-08-03T18:47:54+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//puhoy.github.io/tags/</loc>
+    <lastmod>2019-08-03T18:47:54+02:00</lastmod>
   </url>
   
   <url>
     <loc>//puhoy.github.io/tags/armbian/</loc>
     <lastmod>2019-07-11T14:46:02+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//puhoy.github.io/tags/espressobin/</loc>
     <lastmod>2019-07-11T14:46:02+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//puhoy.github.io/tags/guide/</loc>
     <lastmod>2019-07-11T14:46:02+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -69,7 +60,6 @@
   <url>
     <loc>//puhoy.github.io/tags/linux/</loc>
     <lastmod>2019-07-11T14:46:02+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -79,7 +69,6 @@
   
   <url>
     <loc>//puhoy.github.io/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
