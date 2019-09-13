@@ -1,80 +1,193 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="//puhoy.github.io/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
-    <xsl:output method="html" doctype-system="about:legacy-compat" />
-    <xsl:template match="/rss">
-      <html lang="">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>RSS | &lt;-</title>
-          <link rel="stylesheet" href="//puhoy.github.io/css/base.min.e24230f1f5eed9386729595ee5b1ddc4bc51f07d4d622d31d1f616d9ec32d451.css" integrity="sha256-4kIw8fXu2ThnKVle5bHdxLxR8H1NYi0x0fYW2ewy1FE=" />
-        </head>
-        <body>
-          <nav class="u-background">
-  <div class="u-wrapper">
-    <ul class="Banner">
-      <li class="Banner-item Banner-item--title">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io">&lt;-</a>
-      </li>
-      
-      <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io/about/">about</a>
-      </li>
-      
-      <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io/posts/">posts</a>
-      </li>
-      
-      <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io/tags/">tags</a>
-      </li>
-      
-      <li class="Banner-item">
-        <a class="Banner-link u-clickable" href="//puhoy.github.io/index.xml">rss</a>
-      </li>
-      
-    </ul>
-  </div>
-</nav>
-
-          <main>
-            <div class="u-wrapper">
-              <div class="u-padding">
-                <h2 class="Heading-title">
-                  
-                  <a class="Heading-link u-clickable" href="//puhoy.github.io/categories/index.xml" rel="bookmark">RSS</a>
-                  
-                </h2>
-                
-                <p>
-                  To subscribe to this RSS feed, copy its address and paste it into your favorite feed reader.
-                </p>
-                
-              </div>
-            </div>
-          </main>
-          
-<footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-      Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"> Creative Commons Attribution 4.0 International License</a>.
-    </div>
-  </div>
-</footer>
-
-
-        </body>
-      </html>
-    </xsl:template>
-  </xsl:stylesheet>
   <channel>
-    <title>Categories on &lt;-</title>
+    <title>Categories on ᗧ•••ᗣ</title>
     <link>//puhoy.github.io/categories/</link>
-    <description>Recent content in Categories on &lt;-</description>
+    <description>Recent content in Categories on ᗧ•••ᗣ</description>
     <generator>Hugo -- gohugo.io</generator>
-      <atom:link href="//puhoy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-      <item>
+    <atom:link href="//puhoy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>publishing on pypi</title>
+      <link>//puhoy.github.io/posts/releasing_on_pypi/</link>
+      <pubDate>Fri, 13 Sep 2019 20:04:27 +0200</pubDate>
+      <guid>//puhoy.github.io/posts/releasing_on_pypi/</guid>
+      <description>&lt;p&gt;some notes on packaging &amp;amp; releasing python modules on pypi&lt;/p&gt;
+
+&lt;h2 id=&#34;example-project-structure&#34;&gt;example project structure&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;mypackage
+    mypackage
+        module1
+            __init__.py
+        module2
+            __init__.py
+        app.py
+    tests
+    .bumpversion.cfg
+    .travis.yml
+    setup.py
+    MANIFEST.in
+    LICENSE
+    README.md&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;needed-files&#34;&gt;needed files&lt;/h2&gt;
+
+&lt;h3 id=&#34;setup-py&#34;&gt;setup.py&lt;/h3&gt;
+
+&lt;p&gt;(based on &lt;a href=&#34;https://packaging.python.org/tutorials/packaging-projects/&#34;&gt;https://packaging.python.org/tutorials/packaging-projects/&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; setuptools
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;open&lt;/span&gt;(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;README.md&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;r&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;as&lt;/span&gt; fh:
+    long_description &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; fh&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;read()
+
+setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;setup(
+    name&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;example-pkg-your-username&amp;#34;&lt;/span&gt;,
+    version&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.0.1&amp;#34;&lt;/span&gt;,
+    author&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Example Author&amp;#34;&lt;/span&gt;,
+    author_email&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;author@example.com&amp;#34;&lt;/span&gt;,
+    description&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;A small example package&amp;#34;&lt;/span&gt;,
+    long_description&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;long_description,
+    long_description_content_type&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;text/markdown&amp;#34;&lt;/span&gt;,
+    url&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://github.com/pypa/sampleproject&amp;#34;&lt;/span&gt;,
+    packages&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;find_packages(),
+    classifiers&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;[
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Programming Language :: Python :: 3&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;License :: OSI Approved :: MIT License&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Operating System :: OS Independent&amp;#34;&lt;/span&gt;,
+    ],
+    python_requires&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&amp;gt;=3.6&amp;#39;&lt;/span&gt;,
+    
+    &lt;span style=&#34;color:#6272a4&#34;&gt;# enables the use of MANIFEST.in&lt;/span&gt;
+    include_package_data&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;True,
+    
+    &lt;span style=&#34;color:#6272a4&#34;&gt;# if you are writing a cli tool, add your command here!&lt;/span&gt;
+    &lt;span style=&#34;color:#6272a4&#34;&gt;# more infos here: &lt;/span&gt;
+    &lt;span style=&#34;color:#6272a4&#34;&gt;# https://setuptools.readthedocs.io/en/latest/setuptools.html#automatic-script-creation&lt;/span&gt;
+    entry_points&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;{
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;console_scripts&amp;#39;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;my_command = mypackage.app:myfunction&amp;#39;&lt;/span&gt;
+        ]
+    }
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&#34;adding-requirements-to-setup-py&#34;&gt;adding requirements to setup.py&lt;/h4&gt;
+
+&lt;p&gt;there are a lot of discussions on what you should use:
+a &lt;code&gt;requirements.txt&lt;/code&gt; (and then read it programmatically in your &lt;code&gt;setup.py&lt;/code&gt;) or just a list in the &lt;code&gt;setup.py&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;the &lt;a href=&#34;https://packaging.python.org/discussions/install-requires-vs-requirements/&#34;&gt;packaging user guide&lt;/a&gt;
+explains, that &lt;code&gt;install_requires&lt;/code&gt; should specify the minimal, abstract requirements (without any sub-requirements) for your project to run,
+whereas your &lt;code&gt;requirements.txt&lt;/code&gt; contains a long list of pinned versions of all required packages and their requirements.&lt;/p&gt;
+
+&lt;p&gt;also, a &lt;code&gt;requirements.txt&lt;/code&gt; is usually used when you write a service.
+so, its used to describe a whole &amp;ldquo;environment&amp;rdquo; for your service to run in.&lt;/p&gt;
+
+&lt;p&gt;using &lt;code&gt;extras_require&lt;/code&gt;, you can add different &amp;lsquo;levels&amp;rsquo; of requirements.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;some requirements&amp;#39;&lt;/span&gt;]
+dev_requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;additional development requirements&amp;#39;&lt;/span&gt;]
+test_requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; dev_requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;test requirements&amp;#39;&lt;/span&gt;]
+
+setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;setup(
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;...&lt;/span&gt;,
+    install_requires&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;requirements,
+    extras_require&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;{
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;: dev_requirements,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;: test_requirements
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;...&lt;/span&gt;
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to install the default requirements, run &lt;code&gt;pip install --editable .&lt;/code&gt;
+or, for the dev environment, &lt;code&gt;pip install -e .[dev]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;manifest-in&#34;&gt;MANIFEST.in&lt;/h3&gt;
+
+&lt;p&gt;if you set &lt;code&gt;include_package_data&lt;/code&gt; to &lt;code&gt;True&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
+you enabled &lt;code&gt;MANIFEST.in&lt;/code&gt;. all files specified here are added to your distribution.&lt;/p&gt;
+
+&lt;p&gt;its probably a good idea to use whatever is in your file system:
+(&lt;a href=&#34;https://blog.ionelmc.ro/presentations/packaging/#slide:13&#34;&gt;source&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;graft mypackage docs
+global&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;exclude &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.py[cod] __pycache__ &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.so&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;tests&#34;&gt;tests&lt;/h2&gt;
+
+&lt;p&gt;if you are writing a library its probably a good idea to test your code on different python versions.
+i found travis really good for that.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;language: python
+
+matrix:
+  include:
+    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.5&amp;#34;&lt;/span&gt;
+      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.5&amp;#34;&lt;/span&gt;
+      dist: xenial
+
+    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.6&amp;#34;&lt;/span&gt;
+      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
+      dist: xenial
+
+    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.7&amp;#34;&lt;/span&gt;
+      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.7&amp;#34;&lt;/span&gt;
+      dist: xenial
+
+    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;osx 3.7&amp;#34;&lt;/span&gt;
+      os: osx
+      osx_image: xcode10&lt;span style=&#34;color:#bd93f9&#34;&gt;.2&lt;/span&gt;  &lt;span style=&#34;color:#6272a4&#34;&gt;# Python 3.7.2 running on macOS 10.14.3&lt;/span&gt;
+      language: shell       &lt;span style=&#34;color:#6272a4&#34;&gt;# &amp;#39;language: python&amp;#39; is an error on Travis CI macOS&lt;/span&gt;
+      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.7&amp;#34;&lt;/span&gt;
+
+    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;osx 3.6&amp;#34;&lt;/span&gt;
+      os: osx
+      osx_image: xcode10&lt;span style=&#34;color:#bd93f9&#34;&gt;.2&lt;/span&gt;  &lt;span style=&#34;color:#6272a4&#34;&gt;# Python 3.7.2 running on macOS 10.14.3&lt;/span&gt;
+      language: shell       &lt;span style=&#34;color:#6272a4&#34;&gt;# &amp;#39;language: python&amp;#39; is an error on Travis CI macOS&lt;/span&gt;
+      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
+
+install: pip3 install -e .[test] || pip install -e .[test]
+
+&lt;span style=&#34;color:#6272a4&#34;&gt;# https://docs.travis-ci.com/user/languages/python/#running-python-tests-on-multiple-operating-systems&lt;/span&gt;
+script: python3 -m pytest || python -m pytest
+
+&lt;span style=&#34;color:#6272a4&#34;&gt;# Push the results back to codecov&lt;/span&gt;
+after_success:
+  - codecov&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(another option would be &lt;a href=&#34;https://tox.readthedocs.io/en/latest/&#34;&gt;tox&lt;/a&gt;, but i never actually tried that)&lt;/p&gt;
+
+&lt;h2 id=&#34;versioning&#34;&gt;versioning&lt;/h2&gt;
+
+&lt;p&gt;you can use &lt;a href=&#34;https://github.com/c4urself/bump2version&#34;&gt;bump2version&lt;/a&gt; to update the version where needed.
+just put a &lt;code&gt;.bumpversion.cfg&lt;/code&gt; in the root of your project, and bump your version with &lt;code&gt;bump2version [patch|minor|major]&lt;/code&gt; (use &lt;code&gt;--dry-run&lt;/code&gt; to see the changes before running the actual bump command!)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;[bumpversion]
+current_version = 0.4.1
+commit = True
+tag = True
+
+[bumpversion:file:setup.py]
+search = version=&amp;#39;{current_version}&amp;#39;
+replace = version=&amp;#39;{new_version}&amp;#39;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;actual-releasing-on-pypi&#34;&gt;actual releasing on pypi&lt;/h2&gt;
+
+&lt;h3 id=&#34;building-your-distribution&#34;&gt;building your distribution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;python3 setup.py sdist bdist_wheel&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;builds the source and binary distributions&lt;/p&gt;
+
+&lt;h3 id=&#34;releasing-on-pypi&#34;&gt;releasing on pypi&lt;/h3&gt;
+
+&lt;p&gt;you can use &lt;a href=&#34;https://pypi.org/project/twine/&#34;&gt;twine&lt;/a&gt;
+to upload your created package to pypi.&lt;/p&gt;
+
+&lt;p&gt;to test, you can release it on &lt;code&gt;testpypi&lt;/code&gt; first&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;twine upload --verbose --repository testpypi dist/*&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&amp;hellip;and the install from test pypi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pip install -i https://test.pypi.org/simple/ mypackage&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to release on pypi, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;twine upload --verbose --repository pypi dist/*&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;stuff-to-read&#34;&gt;stuff to read&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.ionelmc.ro/presentations/packaging/&#34;&gt;https://blog.ionelmc.ro/presentations/packaging/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Less known packaging features and tricks&amp;rdquo; - a nice presentation about packaging&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packaging.python.org/overview/&#34;&gt;https://packaging.python.org/overview/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the python packaging guide. a lot to read.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>compiling syncthing protocol buffers for python</title>
       <link>//puhoy.github.io/posts/syncthing_protocol_buffers/</link>
       <pubDate>Sat, 03 Aug 2019 18:47:54 +0200</pubDate>
@@ -154,7 +267,7 @@ communicate between the socket threads you set up and (most likely) a lot more t
 
 &lt;p&gt;i still find it interesting, so there are probably more posts coming on this. :)&lt;/p&gt;</description>
     </item>
-      <item>
+    <item>
       <title>installing armbian on espressobin</title>
       <link>//puhoy.github.io/posts/armbian_on_espressobin/</link>
       <pubDate>Thu, 11 Jul 2019 14:46:02 +0200</pubDate>

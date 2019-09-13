@@ -2,12 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="//puhoy.github.io/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>guide on ᗧ•••ᗣ</title>
-    <link>//puhoy.github.io/tags/guide/</link>
-    <description>Recent content in guide on ᗧ•••ᗣ</description>
+    <title>twine on ᗧ•••ᗣ</title>
+    <link>//puhoy.github.io/tags/twine/</link>
+    <description>Recent content in twine on ᗧ•••ᗣ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 14:46:02 +0200</lastBuildDate>
-    <atom:link href="//puhoy.github.io/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Sep 2019 20:04:27 +0200</lastBuildDate>
+    <atom:link href="//puhoy.github.io/tags/twine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>publishing on pypi</title>
       <link>//puhoy.github.io/posts/releasing_on_pypi/</link>
