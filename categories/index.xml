@@ -164,7 +164,15 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec&lt;/pre&gt;&lt;/div&gt
 
 &lt;p&gt;if you want to find out which applications are running on wayland, you can just start xeyes. the eyes only follow the cursor on X applications. :)&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sudo pacman -S xorg-xeyes&lt;/code&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;sudo pacman -S xorg-xeyes&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;running-firefox-on-wayland&#34;&gt;running firefox on wayland&lt;/h3&gt;
+
+&lt;p&gt;normally firefox is an X application, but you can set&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;MOZ_ENABLE_WAYLAND=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and it will use wayland. just throw it in your /etc/environment, same as the intellij fix!&lt;/p&gt;</description>
     </item>
     <item>
       <title>publishing on pypi</title>
