@@ -6,8 +6,175 @@
     <link>//puhoy.github.io/tags/</link>
     <description>Recent content in Tags on ᗧ•••ᗣ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Sep 2019 20:04:27 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 27 Oct 2019 18:45:45 +0200</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>switching from i3 to sway</title>
+      <link>//puhoy.github.io/posts/switching_from_i3_to_sway/</link>
+      <pubDate>Sun, 27 Oct 2019 18:45:45 +0200</pubDate>
+      <guid>//puhoy.github.io/posts/switching_from_i3_to_sway/</guid>
+      <description>&lt;p&gt;a few months back i switched from i3 to sway. since this is a &amp;ldquo;wayland compositor&amp;rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.&lt;/p&gt;
+
+&lt;p&gt;here are some snippets on what i did to make everything working on archlinux and manjaro.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
+
+&lt;p&gt;just install &lt;code&gt;sway&lt;/code&gt;, along with &lt;code&gt;swayidle&lt;/code&gt; and &lt;code&gt;swaylock&lt;/code&gt; (to lock the screen on inactivity), and &lt;code&gt;xorg-xserver-wayland&lt;/code&gt; to run X11 applications on wayland.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo pacman -S sway swayidle swaylock xorg-xserver-wayland&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;configuration&lt;/h2&gt;
+
+&lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#configuration&#34;&gt;sway wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the config file is located at &lt;code&gt;~/.config/sway/config&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;if you dont have that, you can copy a default config from &lt;code&gt;/etc/sway/config&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;adapt the following things to your needs, and add them to your sway config!&lt;/p&gt;
+
+&lt;h3 id=&#34;keyboard-layout&#34;&gt;keyboard layout&lt;/h3&gt;
+
+&lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#input-configuration&#34;&gt;sway wiki / inputs&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;input * xkb_layout &amp;#34;de&amp;#34;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;swayidle-swaylock&#34;&gt;swayidle / swaylock&lt;/h3&gt;
+
+&lt;p&gt;use swayidle to run a command on inactivity.&lt;/p&gt;
+
+&lt;p&gt;i turn off all outputs after 300s of inactivity, and lock the screen after 600s and &amp;ldquo;before sleep&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;exec swayidle -w \
+      timeout 600 &amp;#39;swaylock -f -c 000000&amp;#39; \
+      timeout 300 &amp;#39;swaymsg &amp;#34;output * dpms off&amp;#34;&amp;#39; \
+           resume &amp;#39;swaymsg &amp;#34;output * dpms on&amp;#34;&amp;#39; \
+      before-sleep &amp;#39;swaylock -f -c 000000&amp;#39;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;also, i bind mod+escape to swaylock to lock manually. (&lt;code&gt;-f&lt;/code&gt; daemonizes, &lt;code&gt;-c 000000&lt;/code&gt; sets a black screen)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym $mod+Escape exec swaylock -f -c 000000&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;displays&#34;&gt;displays&lt;/h3&gt;
+
+&lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#display-configuration&#34;&gt;sway wiki / displays&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;if you dont switch screens a lot, its probably fine to just define your config in your sway config file. just get the available modes from &lt;code&gt;swaymsg -t get_outputs&lt;/code&gt;, and set something like&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;output HDMI1 pos 0 0 res 1920x1080
+output eDP1 pos 1920 0 res 1600x900 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;instead of the port (&lt;code&gt;HDMI1&lt;/code&gt;, &lt;code&gt;eDP1&lt;/code&gt;) you can also use the name found in &lt;code&gt;get_outputs&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;the coordinates (&lt;code&gt;pos 0 0&lt;/code&gt;) are starting in the upper left and grow right and downwards. the result will look something like this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;x y
+0 0                1920 0
+  +------------------+---------------+
+  |                  |               |
+  |                  |               |
+  |                  |               |
+  |                  |               |
+  |                  +---------------+
+  |                  |
+  +------------------+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if you want to scale your screens, you can do so by setting &lt;code&gt;output HDMI1 scale 2&lt;/code&gt;. in this case, the x-coordinate of the second screen is &lt;code&gt;1920*2&lt;/code&gt;, 3840!&lt;/p&gt;
+
+&lt;p&gt;the sway wiki does not recommend fractional scaling, but i never had issues with this and i like to run my hidpi screens on a scale around &lt;code&gt;1.6&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;kanshi&#34;&gt;kanshi&lt;/h4&gt;
+
+&lt;p&gt;if you switch your displays often, eg. you connect your laptop to different screens with different setups, &lt;a href=&#34;https://github.com/emersion/kanshi&#34;&gt;kanshi&lt;/a&gt; (&lt;a href=&#34;https://aur.archlinux.org/packages/kanshi-git/&#34;&gt;arch user repo&lt;/a&gt;) is a nice tool to handle the configuration.&lt;/p&gt;
+
+&lt;p&gt;the idea is that you describe your different display setups, and when all displays in a setup are connected, the config will be applied.&lt;/p&gt;
+
+&lt;p&gt;to start, create a new config file in &lt;code&gt;.config/kanshi/config&lt;/code&gt;.
+the syntax is a bit different from the sway config syntax.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;{
+    output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
+}
+
+{
+    output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
+    output &amp;#34;Some Display 0x0123&amp;#34; enable scale 2 mode 3840x2160 position 1600,0
+}
+
+{
+    output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
+    output &amp;#34;Another Display&amp;#34; enable scale 1.3 mode 2560x1440 position 1600,0
+}&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;after you saved your config, try by starting kanshi: &lt;code&gt;kanshi&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;if everything works as you expect, add &lt;code&gt;exec kanshi &amp;amp;&lt;/code&gt; to your sway config to run kanshi when you start sway!&lt;/p&gt;
+
+&lt;h3 id=&#34;brightness&#34;&gt;brightness&lt;/h3&gt;
+
+&lt;p&gt;to control screen brightness i decided to use &lt;code&gt;brightnessctl&lt;/code&gt;. (i used &lt;a href=&#34;https://github.com/haikarainen/light&#34;&gt;light&lt;/a&gt; before, but &lt;code&gt;brightnessctl&lt;/code&gt; is in the arch repos.)&lt;/p&gt;
+
+&lt;p&gt;just run &lt;code&gt;sudo pacman -S brightnessctl&lt;/code&gt; to install, and add your user to the &lt;code&gt;video&lt;/code&gt; group with &lt;code&gt;sudo usermod -aG video USERNAME&lt;/code&gt;. otherwise, you wont be allowed to change brightness.&lt;/p&gt;
+
+&lt;p&gt;in sway config, add&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to bind the keys to the &lt;code&gt;brightnessctl&lt;/code&gt; commands.&lt;/p&gt;
+
+&lt;h3 id=&#34;hiding-cursors-on-inactivity&#34;&gt;hiding cursors on inactivity&lt;/h3&gt;
+
+&lt;p&gt;i like to not see the curser when i dont use it. just add this to the sway config.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;seat * hide_cursor 8000&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;other-replacements&#34;&gt;other replacements&lt;/h2&gt;
+
+&lt;h3 id=&#34;dmenu-bemenu&#34;&gt;dmenu -&amp;gt; bemenu&lt;/h3&gt;
+
+&lt;p&gt;since &lt;code&gt;dmenu&lt;/code&gt; is x11, you could switch to &lt;code&gt;bemenu&lt;/code&gt;. it feels the same, but is wayland.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo pacman -S bemenu&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;in sway config:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;set $bemenu_options -i --nb &amp;#34;#3f3f3f&amp;#34; --nf &amp;#34;#dcdccc&amp;#34; --fn &amp;#34;pango:DejaVu Sans Mono 12&amp;#34;
+set $menu_command bemenu $bemenu_options
+set $menu dmenu_path | $menu_command | xargs swaymsg exec&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;screenshots&#34;&gt;screenshots&lt;/h3&gt;
+
+&lt;p&gt;for screenshots, i use a combination of &lt;a href=&#34;https://github.com/emersion/grim&#34;&gt;grim&lt;/a&gt; and &lt;a href=&#34;https://github.com/emersion/slurp&#34;&gt;slurp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;slurp&lt;/code&gt; lets you select a region on screen and prints the coordinates, which you can use as input for &lt;code&gt;grim&lt;/code&gt;, which then creates the actual screenshot.&lt;/p&gt;
+
+&lt;p&gt;in the end, i pipe the output to &lt;code&gt;wl-copy&lt;/code&gt; (which is part of &lt;code&gt;wl-clipboard&lt;/code&gt;), to paste it wherever i need it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo pacman -S grim slurp wl-clipboard&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;sway config:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym $mod+Print exec grim -g &amp;#34;$(slurp)&amp;#34; - | wl-copy&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;notifications&#34;&gt;notifications&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/emersion/mako&#34;&gt;mako&lt;/a&gt; is a notification daemon.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo pacman -S mako&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;sway config:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;exec mako --default-timeout 5000 &amp;amp;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;redshift&#34;&gt;redshift&lt;/h3&gt;
+
+&lt;p&gt;if you used redshift before, you will notice that it doesnt work. there is an aur for a patched version: &lt;a href=&#34;https://aur.archlinux.org/packages/redshift-wayland-git/&#34;&gt;redshift-wayland-git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;networkmanager-applet&#34;&gt;NetworkManager Applet&lt;/h3&gt;
+
+&lt;p&gt;unfortunately the nm-applet is not showing on wayland. i just started to use &amp;ldquo;NetworkManager text user interface&amp;rdquo;, &lt;code&gt;nmtui&lt;/code&gt;, instead.&lt;/p&gt;
+
+&lt;h2 id=&#34;not-really-sway-related-but-tricky-on-wayland&#34;&gt;not really sway-related, but tricky on wayland&lt;/h2&gt;
+
+&lt;h3 id=&#34;fixing-intellij&#34;&gt;fixing intellij&lt;/h3&gt;
+
+&lt;p&gt;intellij starts with a blank window. the problem (and the solution) is described &lt;a href=&#34;https://github.com/swaywm/sway/issues/595&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;short version: fix it by adding &lt;code&gt;_JAVA_AWT_WM_NONREPARENTING=1&lt;/code&gt; to /etc/environment.&lt;/p&gt;
+
+&lt;h3 id=&#34;finding-out-which-application-is-x-or-wayland&#34;&gt;finding out which application is X or wayland&lt;/h3&gt;
+
+&lt;p&gt;if you want to find out which applications are running on wayland, you can just start xeyes. the eyes only follow the cursor on X applications. :)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo pacman -S xorg-xeyes&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;running-firefox-on-wayland&#34;&gt;running firefox on wayland&lt;/h3&gt;
+
+&lt;p&gt;normally firefox is an X application, but you can set&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;MOZ_ENABLE_WAYLAND=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and it will use wayland. just throw it in your /etc/environment, same as the intellij fix!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>publishing on pypi</title>
       <link>//puhoy.github.io/posts/releasing_on_pypi/</link>

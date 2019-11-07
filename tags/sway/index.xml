@@ -2,11 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="//puhoy.github.io/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on ᗧ•••ᗣ</title>
-    <link>//puhoy.github.io/categories/</link>
-    <description>Recent content in Categories on ᗧ•••ᗣ</description>
+    <title>sway on ᗧ•••ᗣ</title>
+    <link>//puhoy.github.io/tags/sway/</link>
+    <description>Recent content in sway on ᗧ•••ᗣ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="//puhoy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Oct 2019 18:45:45 +0200</lastBuildDate>
+    <atom:link href="//puhoy.github.io/tags/sway/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>switching from i3 to sway</title>
       <link>//puhoy.github.io/posts/switching_from_i3_to_sway/</link>
