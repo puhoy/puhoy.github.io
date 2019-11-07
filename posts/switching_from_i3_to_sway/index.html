@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.57.2" />
+  <meta name="generator" content="Hugo 0.59.0" />
   <meta itemprop="name" content="switching from i3 to sway">
 <meta itemprop="description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
 
@@ -12,11 +12,11 @@ here are some snippets on what i did to make everything working on archlinux and
 
 <meta itemprop="datePublished" content="2019-10-27T18:45:45&#43;02:00" />
 <meta itemprop="dateModified" content="2019-10-27T18:45:45&#43;02:00" />
-<meta itemprop="wordCount" content="937">
+<meta itemprop="wordCount" content="906">
 
 
 
-<meta itemprop="keywords" content="sway,snippets,guide,linux," />
+<meta itemprop="keywords" content="" />
 
   <meta property="og:title" content="switching from i3 to sway" />
 <meta property="og:description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
@@ -246,56 +246,12 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec</pre></div>
 <p>if you want to find out which applications are running on wayland, you can just start xeyes. the eyes only follow the cursor on X applications. :)</p>
 
 <p><code>sudo pacman -S xorg-xeyes</code></p>
-
-<h3 id="running-firefox-on-wayland">running firefox on wayland</h3>
-
-<p>normally firefox is an X application, but you can set</p>
-
-<p><code>MOZ_ENABLE_WAYLAND=1</code></p>
-
-<p>and it will use wayland. just throw it in your /etc/environment, same as the intellij fix!</p>
   
 
 
 
 
 
-
-<footer>
-  
-  
-  
-  
-  <ul class="Tags">
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/sway/" rel="tag">sway</a>
-    </li>
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/snippets/" rel="tag">snippets</a>
-    </li>
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/guide/" rel="tag">guide</a>
-    </li>
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/linux/" rel="tag">linux</a>
-    </li>
-    
-    
-  </ul>
-  
-  
-</footer>
 
 
   
