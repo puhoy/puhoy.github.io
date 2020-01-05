@@ -9,6 +9,81 @@
     <lastBuildDate>Thu, 11 Jul 2019 14:46:02 +0200</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/espressobin/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>google free android</title>
+      <link>//puhoy.github.io/posts/google_free_android/</link>
+      <pubDate>Tue, 31 Dec 2019 18:54:52 +0100</pubDate>
+      <guid>//puhoy.github.io/posts/google_free_android/</guid>
+      <description>&lt;p&gt;a few days ago i set my phone up with a lineage without opengapps, and used microg instead.
+without the playstore and google services, i needed some replacements.&lt;/p&gt;
+
+&lt;p&gt;a list.&lt;/p&gt;
+
+&lt;h2 id=&#34;alternative-stores&#34;&gt;alternative stores&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid&lt;/a&gt;
+- app store with free and open source apps&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gitlab.com/AuroraOSS/AuroraStore&#34;&gt;aurora store&lt;/a&gt;
+ - access to free apps in the play store
+(available in f-droid)&lt;/p&gt;
+
+&lt;h2 id=&#34;maps&#34;&gt;maps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://osmand.net/&#34;&gt;osmand~&lt;/a&gt;
+- openstreetmap client; works offline!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://transportr.app/&#34;&gt;transportr&lt;/a&gt;
+- public transport app with lots of backends!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://openvegemap.netlib.re/&#34;&gt;openvegemap&lt;/a&gt;
+- find vegetarian and vegan restaurants, based on openstreetmap&lt;/p&gt;
+
+&lt;h2 id=&#34;weather&#34;&gt;weather&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/martykan/forecastie&#34;&gt;forecastie&lt;/a&gt;
+- a nice and simple weather app; uses openweathermap. includes widgets!&lt;/p&gt;
+
+&lt;h2 id=&#34;mail&#34;&gt;mail&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://k9mail.github.io/&#34;&gt;k9 mail&lt;/a&gt;
+- a surprisingly usable mail app&lt;/p&gt;
+
+&lt;h2 id=&#34;calendar&#34;&gt;calendar&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Etar-Group/Etar-Calendar&#34;&gt;etar&lt;/a&gt;
+- nice calendar app&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gitlab.com/bitfireAT/davx5-ose&#34;&gt;DAVx⁵&lt;/a&gt;
+- sync caldav calendars to your phone&lt;/p&gt;
+
+&lt;h2 id=&#34;messaging&#34;&gt;messaging&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://signal.org/&#34;&gt;signal&lt;/a&gt;
+- secure messaging. if you want people to switch away from whatsapp, this is probably what comes closest.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://conversations.im/&#34;&gt;conversations&lt;/a&gt;
+- a nice xmpp client&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://fedilab.app/&#34;&gt;fedilab&lt;/a&gt;
+- a fediverse client; free in f-droid!&lt;/p&gt;
+
+&lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blokada.org/&#34;&gt;blokada&lt;/a&gt;
+- filter ads across all your apps!&lt;/p&gt;
+
+&lt;h2 id=&#34;apps-to-support-free-databases&#34;&gt;apps to support free databases&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/westnordost/StreetComplete&#34;&gt;streetcomplete&lt;/a&gt;
+- nice app to fill some of the gaps in openstreetmap. just answer simple questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://location.services.mozilla.com/&#34;&gt;mozilla stumbler&lt;/a&gt;
+- help make mozillas location service better&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://openfoodfacts.org/&#34;&gt;openfoodfacts&lt;/a&gt;
+- get foodfacts by scanning barcodes on products. also, help fill the database!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>switching from i3 to sway</title>
       <link>//puhoy.github.io/posts/switching_from_i3_to_sway/</link>
       <pubDate>Sun, 27 Oct 2019 18:45:45 +0200</pubDate>
