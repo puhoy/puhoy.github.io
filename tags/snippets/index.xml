@@ -9,6 +9,21 @@
     <lastBuildDate>Sun, 27 Oct 2019 18:45:45 +0200</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/snippets/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>gog scumm games on linux</title>
+      <link>//puhoy.github.io/posts/gog_scumm_games_on_linux/</link>
+      <pubDate>Sun, 16 Feb 2020 13:05:43 +0100</pubDate>
+      <guid>//puhoy.github.io/posts/gog_scumm_games_on_linux/</guid>
+      <description>&lt;p&gt;GOG.com offers some of the old lucas arts games, like monkey island.
+but they only have the windows versions.&lt;/p&gt;
+
+&lt;p&gt;but since they packed the installer with inno setup, you can just extract the content using innoextract,
+and run the game with scummvm. no need to use wine!&lt;/p&gt;
+
+&lt;p&gt;just run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;innoextract  --output-dir &amp;lt;output_dir&amp;gt; &amp;lt;path/to/installer.exe&amp;gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then start scummvm, add new game, choose your output folder and start playing. :)&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>fixing a missing terminfo</title>
       <link>//puhoy.github.io/posts/terminfo/</link>
       <pubDate>Sun, 16 Feb 2020 10:53:08 +0100</pubDate>
