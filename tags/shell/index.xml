@@ -2,12 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="//puhoy.github.io/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lineage on ᗧ•••ᗣ</title>
-    <link>//puhoy.github.io/tags/lineage/</link>
-    <description>Recent content in lineage on ᗧ•••ᗣ</description>
+    <title>shell on ᗧ•••ᗣ</title>
+    <link>//puhoy.github.io/tags/shell/</link>
+    <description>Recent content in shell on ᗧ•••ᗣ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Dec 2019 18:54:52 +0100</lastBuildDate>
-    <atom:link href="//puhoy.github.io/tags/lineage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Feb 2020 10:53:08 +0100</lastBuildDate>
+    <atom:link href="//puhoy.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fixing a missing terminfo</title>
       <link>//puhoy.github.io/posts/terminfo/</link>
