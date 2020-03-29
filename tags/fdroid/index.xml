@@ -9,18 +9,59 @@
     <lastBuildDate>Tue, 31 Dec 2019 18:54:52 +0100</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/fdroid/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Nice DIY Headphone Pads in 10 Minutes</title>
+      <link>//puhoy.github.io/posts/headphone_pads/</link>
+      <pubDate>Sun, 29 Mar 2020 19:26:31 +0200</pubDate>
+      <guid>//puhoy.github.io/posts/headphone_pads/</guid>
+      <description>&lt;p&gt;idea from &lt;a href=&#34;https://www.instructables.com/id/Sockophones-earphone-padding-made-from-socks/&#34;&gt;instructables&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_0.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;i just used the foam from the old plasticky pads.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_2.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_4.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;//puhoy.github.io/static/img/headphone_pads_5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bauernbrot Roggensauerteig&#43;Weizen</title>
+      <link>//puhoy.github.io/posts/roggensauerteigbrot/</link>
+      <pubDate>Sun, 29 Mar 2020 18:20:02 +0200</pubDate>
+      <guid>//puhoy.github.io/posts/roggensauerteigbrot/</guid>
+      <description>&lt;p&gt;Basierend auf &lt;a href=&#34;https://www.ohnemist.de/bauernbrot-mit-sauerteig-roggenvollkornmehl&#34;&gt;ohnemist.de/bauernbrot-mit-sauerteig-roggenvollkornmehl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//puhoy.github.io/static/img/bread.jpg&#34; alt=&#34;brot, frisch aus dem topf :)&#34;&gt;
+&lt;img src=&#34;//puhoy.github.io/static/img/bread_slices.jpg&#34; alt=&#34;brotscheiben&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;250ml warmes Wasser
+50g Sauerteig
+220g Roggenvollkornmehl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Verrühren, 15h reifen lassen.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;18g Salz
+350ml warmes Wasser
+440g Roggenmehl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Auf den gereiften Teig schütten, alles verrühren, 3h reifen lassen.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;340g Weizenmehl
+evtl. Wasser, wenn zu fest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Gut verkneten, 1-6h gehen lassen. Volumen sollte sich 1/3 erhöhen.&lt;/p&gt;
+&lt;p&gt;Ofen auf 250°C vorheizen.&lt;/p&gt;
+&lt;p&gt;(Evtl. Schüssel mit Wasser in den Ofen stellen!)&lt;br&gt;
+Erst bei hoher Temperatur backen, nach 10-20min auf 180-220°C runter drehen.
+Insgesamt ca. 75 Minuten backen.&lt;/p&gt;
+&lt;p&gt;Funktioniert auch sehr gut im gusseisernen Topf!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>gog scumm games on linux</title>
       <link>//puhoy.github.io/posts/gog_scumm_games_on_linux/</link>
       <pubDate>Sun, 16 Feb 2020 13:05:43 +0100</pubDate>
       <guid>//puhoy.github.io/posts/gog_scumm_games_on_linux/</guid>
       <description>&lt;p&gt;GOG.com offers some of the old lucas arts games, like monkey island.
 but they only have the windows versions.&lt;/p&gt;
-
 &lt;p&gt;but since they packed the installer with inno setup, you can just extract the content using innoextract,
 and run the game with scummvm. no need to use wine!&lt;/p&gt;
-
 &lt;p&gt;just run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;innoextract  --output-dir &amp;lt;output_dir&amp;gt; &amp;lt;path/to/installer.exe&amp;gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;innoextract  --output-dir &amp;lt;output_dir&amp;gt; &amp;lt;path/to/installer.exe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;then start scummvm, add new game, choose your output folder and start playing. :)&lt;/p&gt;</description>
     </item>
     <item>
@@ -29,19 +70,17 @@ and run the game with scummvm. no need to use wine!&lt;/p&gt;
       <pubDate>Sun, 16 Feb 2020 10:53:08 +0100</pubDate>
       <guid>//puhoy.github.io/posts/terminfo/</guid>
       <description>&lt;p&gt;sometimes when you ssh to a remote machine, you see something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;fish: Konnte Terminal nicht einrichten
-fish: Check that your terminal type, &amp;#39;xterm-termite&amp;#39;, is supported on this system
-fish: Attempting to use &amp;#39;ansi&amp;#39; instead&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;fish: Konnte Terminal nicht einrichten
+fish: Check that your terminal type, &#39;xterm-termite&#39;, is supported on this system
+fish: Attempting to use &#39;ansi&#39; instead
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and maybe the terminal behaves a bit funky - things like lines not displayed correctly when browsing the shell history.&lt;/p&gt;
-
 &lt;p&gt;the reason for this could be the missing &lt;a href=&#34;https://en.wikipedia.org/wiki/Terminfo&#34;&gt;terminfo&lt;/a&gt; entry for your terminal.&lt;/p&gt;
-
 &lt;p&gt;get the missing shell from the error message, or by running &lt;code&gt;echo $TERM&lt;/code&gt; on your local machine.&lt;/p&gt;
-
 &lt;p&gt;on arch, the missing file is in &lt;code&gt;/lib/terminfo/&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;just copy the file over to the remote machine:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;scp /lib/terminfo/x/xterm-termite user@host:/lib/terminfo/x/xterm-termite  &lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;scp /lib/terminfo/x/xterm-termite user@host:/lib/terminfo/x/xterm-termite  
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and login again.&lt;/p&gt;</description>
     </item>
     <item>
@@ -51,73 +90,80 @@ fish: Attempting to use &amp;#39;ansi&amp;#39; instead&lt;/pre&gt;&lt;/div&gt;
       <guid>//puhoy.github.io/posts/google_free_android/</guid>
       <description>&lt;p&gt;a few days ago i set my phone up with a lineage without opengapps, and used microg instead.
 without the playstore and google services, i needed some replacements.&lt;/p&gt;
-
 &lt;p&gt;a list.&lt;/p&gt;
-
 &lt;h2 id=&#34;alternative-stores&#34;&gt;alternative stores&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid&lt;/a&gt;
-- app store with free and open source apps&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gitlab.com/AuroraOSS/AuroraStore&#34;&gt;aurora store&lt;/a&gt;
- - access to free apps in the play store
-(available in f-droid)&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app store with free and open source apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://gitlab.com/AuroraOSS/AuroraStore&#34;&gt;aurora store&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;access to free apps in the play store
+(available in f-droid)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;maps&#34;&gt;maps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://osmand.net/&#34;&gt;osmand~&lt;/a&gt;
-- openstreetmap client; works offline!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://transportr.app/&#34;&gt;transportr&lt;/a&gt;
-- public transport app with lots of backends!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://openvegemap.netlib.re/&#34;&gt;openvegemap&lt;/a&gt;
-- find vegetarian and vegan restaurants, based on openstreetmap&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://osmand.net/&#34;&gt;osmand~&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;openstreetmap client; works offline!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://transportr.app/&#34;&gt;transportr&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;public transport app with lots of backends!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://openvegemap.netlib.re/&#34;&gt;openvegemap&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;find vegetarian and vegan restaurants, based on openstreetmap&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;weather&#34;&gt;weather&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/martykan/forecastie&#34;&gt;forecastie&lt;/a&gt;
-- a nice and simple weather app; uses openweathermap. includes widgets!&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://github.com/martykan/forecastie&#34;&gt;forecastie&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a nice and simple weather app; uses openweathermap. includes widgets!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;mail&#34;&gt;mail&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://k9mail.github.io/&#34;&gt;k9 mail&lt;/a&gt;
-- a surprisingly usable mail app&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://k9mail.github.io/&#34;&gt;k9 mail&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a surprisingly usable mail app&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;calendar&#34;&gt;calendar&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/Etar-Group/Etar-Calendar&#34;&gt;etar&lt;/a&gt;
-- nice calendar app&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gitlab.com/bitfireAT/davx5-ose&#34;&gt;DAVx⁵&lt;/a&gt;
-- sync caldav calendars to your phone&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://github.com/Etar-Group/Etar-Calendar&#34;&gt;etar&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nice calendar app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://gitlab.com/bitfireAT/davx5-ose&#34;&gt;DAVx⁵&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sync caldav calendars to your phone&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;messaging&#34;&gt;messaging&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://signal.org/&#34;&gt;signal&lt;/a&gt;
-- secure messaging. if you want people to switch away from whatsapp, this is probably what comes closest.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://conversations.im/&#34;&gt;conversations&lt;/a&gt;
-- a nice xmpp client&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://fedilab.app/&#34;&gt;fedilab&lt;/a&gt;
-- a fediverse client; free in f-droid!&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://signal.org/&#34;&gt;signal&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;secure messaging. if you want people to switch away from whatsapp, this is probably what comes closest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://conversations.im/&#34;&gt;conversations&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a nice xmpp client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://fedilab.app/&#34;&gt;fedilab&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a fediverse client; free in f-droid!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://blokada.org/&#34;&gt;blokada&lt;/a&gt;
-- filter ads across all your apps!&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://blokada.org/&#34;&gt;blokada&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;filter ads across all your apps!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;apps-to-support-free-databases&#34;&gt;apps to support free databases&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/westnordost/StreetComplete&#34;&gt;streetcomplete&lt;/a&gt;
-- nice app to fill some of the gaps in openstreetmap. just answer simple questions.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://location.services.mozilla.com/&#34;&gt;mozilla stumbler&lt;/a&gt;
-- help make mozillas location service better&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://openfoodfacts.org/&#34;&gt;openfoodfacts&lt;/a&gt;
-- get foodfacts by scanning barcodes on products. also, help fill the database!&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://github.com/westnordost/StreetComplete&#34;&gt;streetcomplete&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nice app to fill some of the gaps in openstreetmap. just answer simple questions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://location.services.mozilla.com/&#34;&gt;mozilla stumbler&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;help make mozillas location service better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://openfoodfacts.org/&#34;&gt;openfoodfacts&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get foodfacts by scanning barcodes on products. also, help fill the database!&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>switching from i3 to sway</title>
@@ -125,52 +171,40 @@ without the playstore and google services, i needed some replacements.&lt;/p&gt;
       <pubDate>Sun, 27 Oct 2019 18:45:45 +0200</pubDate>
       <guid>//puhoy.github.io/posts/switching_from_i3_to_sway/</guid>
       <description>&lt;p&gt;a few months back i switched from i3 to sway. since this is a &amp;ldquo;wayland compositor&amp;rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.&lt;/p&gt;
-
 &lt;p&gt;here are some snippets on what i did to make everything working on archlinux and manjaro.&lt;/p&gt;
-
 &lt;h2 id=&#34;installation&#34;&gt;installation&lt;/h2&gt;
-
 &lt;p&gt;just install &lt;code&gt;sway&lt;/code&gt;, along with &lt;code&gt;swayidle&lt;/code&gt; and &lt;code&gt;swaylock&lt;/code&gt; (to lock the screen on inactivity), and &lt;code&gt;xorg-xserver-wayland&lt;/code&gt; to run X11 applications on wayland.&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;sudo pacman -S sway swayidle swaylock xorg-xserver-wayland&lt;/code&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;configuration&#34;&gt;configuration&lt;/h2&gt;
-
 &lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#configuration&#34;&gt;sway wiki&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;the config file is located at &lt;code&gt;~/.config/sway/config&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;if you dont have that, you can copy a default config from &lt;code&gt;/etc/sway/config&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;adapt the following things to your needs, and add them to your sway config!&lt;/p&gt;
-
 &lt;h3 id=&#34;keyboard-layout&#34;&gt;keyboard layout&lt;/h3&gt;
-
 &lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#input-configuration&#34;&gt;sway wiki / inputs&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;input * xkb_layout &amp;#34;de&amp;#34;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;swayidle-swaylock&#34;&gt;swayidle / swaylock&lt;/h3&gt;
-
+&lt;pre&gt;&lt;code&gt;input * xkb_layout &amp;quot;de&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;swayidle--swaylock&#34;&gt;swayidle / swaylock&lt;/h3&gt;
 &lt;p&gt;use swayidle to run a command on inactivity.&lt;/p&gt;
-
 &lt;p&gt;i turn off all outputs after 300s of inactivity, and lock the screen after 600s and &amp;ldquo;before sleep&amp;rdquo;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;exec swayidle -w \
-      timeout 600 &amp;#39;swaylock -f -c 000000&amp;#39; \
-      timeout 300 &amp;#39;swaymsg &amp;#34;output * dpms off&amp;#34;&amp;#39; \
-           resume &amp;#39;swaymsg &amp;#34;output * dpms on&amp;#34;&amp;#39; \
-      before-sleep &amp;#39;swaylock -f -c 000000&amp;#39;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;exec swayidle -w \
+      timeout 600 &#39;swaylock -f -c 000000&#39; \
+      timeout 300 &#39;swaymsg &amp;quot;output * dpms off&amp;quot;&#39; \
+           resume &#39;swaymsg &amp;quot;output * dpms on&amp;quot;&#39; \
+      before-sleep &#39;swaylock -f -c 000000&#39;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;also, i bind mod+escape to swaylock to lock manually. (&lt;code&gt;-f&lt;/code&gt; daemonizes, &lt;code&gt;-c 000000&lt;/code&gt; sets a black screen)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym $mod+Escape exec swaylock -f -c 000000&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;bindsym $mod+Escape exec swaylock -f -c 000000
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;displays&#34;&gt;displays&lt;/h3&gt;
-
 &lt;p&gt;-&amp;gt; &lt;a href=&#34;https://github.com/swaywm/sway/wiki#display-configuration&#34;&gt;sway wiki / displays&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;if you dont switch screens a lot, its probably fine to just define your config in your sway config file. just get the available modes from &lt;code&gt;swaymsg -t get_outputs&lt;/code&gt;, and set something like&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;output HDMI1 pos 0 0 res 1920x1080
-output eDP1 pos 1920 0 res 1600x900 &lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;output HDMI1 pos 0 0 res 1920x1080
+output eDP1 pos 1920 0 res 1600x900 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;instead of the port (&lt;code&gt;HDMI1&lt;/code&gt;, &lt;code&gt;eDP1&lt;/code&gt;) you can also use the name found in &lt;code&gt;get_outputs&lt;/code&gt;!&lt;/p&gt;
-
 &lt;p&gt;the coordinates (&lt;code&gt;pos 0 0&lt;/code&gt;) are starting in the upper left and grow right and downwards. the result will look something like this.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;x y
+&lt;pre&gt;&lt;code&gt;x y
 0 0                1920 0
   +------------------+---------------+
   |                  |               |
@@ -179,111 +213,80 @@ output eDP1 pos 1920 0 res 1600x900 &lt;/pre&gt;&lt;/div&gt;
   |                  |               |
   |                  +---------------+
   |                  |
-  +------------------+&lt;/pre&gt;&lt;/div&gt;
+  +------------------+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;if you want to scale your screens, you can do so by setting &lt;code&gt;output HDMI1 scale 2&lt;/code&gt;. in this case, the x-coordinate of the second screen is &lt;code&gt;1920*2&lt;/code&gt;, 3840!&lt;/p&gt;
-
 &lt;p&gt;the sway wiki does not recommend fractional scaling, but i never had issues with this and i like to run my hidpi screens on a scale around &lt;code&gt;1.6&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h4 id=&#34;kanshi&#34;&gt;kanshi&lt;/h4&gt;
-
 &lt;p&gt;if you switch your displays often, eg. you connect your laptop to different screens with different setups, &lt;a href=&#34;https://github.com/emersion/kanshi&#34;&gt;kanshi&lt;/a&gt; (&lt;a href=&#34;https://aur.archlinux.org/packages/kanshi-git/&#34;&gt;arch user repo&lt;/a&gt;) is a nice tool to handle the configuration.&lt;/p&gt;
-
 &lt;p&gt;the idea is that you describe your different display setups, and when all displays in a setup are connected, the config will be applied.&lt;/p&gt;
-
 &lt;p&gt;to start, create a new config file in &lt;code&gt;.config/kanshi/config&lt;/code&gt;.
 the syntax is a bit different from the sway config syntax.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;{
+&lt;pre&gt;&lt;code&gt;{
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
 }
 
 {
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
-    output &amp;#34;Some Display 0x0123&amp;#34; enable scale 2 mode 3840x2160 position 1600,0
+    output &amp;quot;Some Display 0x0123&amp;quot; enable scale 2 mode 3840x2160 position 1600,0
 }
 
 {
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
-    output &amp;#34;Another Display&amp;#34; enable scale 1.3 mode 2560x1440 position 1600,0
-}&lt;/pre&gt;&lt;/div&gt;
+    output &amp;quot;Another Display&amp;quot; enable scale 1.3 mode 2560x1440 position 1600,0
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;after you saved your config, try by starting kanshi: &lt;code&gt;kanshi&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;if everything works as you expect, add &lt;code&gt;exec kanshi &amp;amp;&lt;/code&gt; to your sway config to run kanshi when you start sway!&lt;/p&gt;
-
 &lt;h3 id=&#34;brightness&#34;&gt;brightness&lt;/h3&gt;
-
 &lt;p&gt;to control screen brightness i decided to use &lt;code&gt;brightnessctl&lt;/code&gt;. (i used &lt;a href=&#34;https://github.com/haikarainen/light&#34;&gt;light&lt;/a&gt; before, but &lt;code&gt;brightnessctl&lt;/code&gt; is in the arch repos.)&lt;/p&gt;
-
 &lt;p&gt;just run &lt;code&gt;sudo pacman -S brightnessctl&lt;/code&gt; to install, and add your user to the &lt;code&gt;video&lt;/code&gt; group with &lt;code&gt;sudo usermod -aG video USERNAME&lt;/code&gt;. otherwise, you wont be allowed to change brightness.&lt;/p&gt;
-
 &lt;p&gt;in sway config, add&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;to bind the keys to the &lt;code&gt;brightnessctl&lt;/code&gt; commands.&lt;/p&gt;
-
 &lt;h3 id=&#34;hiding-cursors-on-inactivity&#34;&gt;hiding cursors on inactivity&lt;/h3&gt;
-
 &lt;p&gt;i like to not see the curser when i dont use it. just add this to the sway config.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;seat * hide_cursor 8000&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;seat * hide_cursor 8000
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;other-replacements&#34;&gt;other replacements&lt;/h2&gt;
-
-&lt;h3 id=&#34;dmenu-bemenu&#34;&gt;dmenu -&amp;gt; bemenu&lt;/h3&gt;
-
+&lt;h3 id=&#34;dmenu---bemenu&#34;&gt;dmenu -&amp;gt; bemenu&lt;/h3&gt;
 &lt;p&gt;since &lt;code&gt;dmenu&lt;/code&gt; is x11, you could switch to &lt;code&gt;bemenu&lt;/code&gt;. it feels the same, but is wayland.&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;sudo pacman -S bemenu&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;in sway config:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;set $bemenu_options -i --nb &amp;#34;#3f3f3f&amp;#34; --nf &amp;#34;#dcdccc&amp;#34; --fn &amp;#34;pango:DejaVu Sans Mono 12&amp;#34;
+&lt;pre&gt;&lt;code&gt;set $bemenu_options -i --nb &amp;quot;#3f3f3f&amp;quot; --nf &amp;quot;#dcdccc&amp;quot; --fn &amp;quot;pango:DejaVu Sans Mono 12&amp;quot;
 set $menu_command bemenu $bemenu_options
-set $menu dmenu_path | $menu_command | xargs swaymsg exec&lt;/pre&gt;&lt;/div&gt;
+set $menu dmenu_path | $menu_command | xargs swaymsg exec
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;screenshots&#34;&gt;screenshots&lt;/h3&gt;
-
 &lt;p&gt;for screenshots, i use a combination of &lt;a href=&#34;https://github.com/emersion/grim&#34;&gt;grim&lt;/a&gt; and &lt;a href=&#34;https://github.com/emersion/slurp&#34;&gt;slurp&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;slurp&lt;/code&gt; lets you select a region on screen and prints the coordinates, which you can use as input for &lt;code&gt;grim&lt;/code&gt;, which then creates the actual screenshot.&lt;/p&gt;
-
 &lt;p&gt;in the end, i pipe the output to &lt;code&gt;wl-copy&lt;/code&gt; (which is part of &lt;code&gt;wl-clipboard&lt;/code&gt;), to paste it wherever i need it.&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;sudo pacman -S grim slurp wl-clipboard&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;sway config:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;bindsym $mod+Print exec grim -g &amp;#34;$(slurp)&amp;#34; - | wl-copy&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;bindsym $mod+Print exec grim -g &amp;quot;$(slurp)&amp;quot; - | wl-copy
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;notifications&#34;&gt;notifications&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://github.com/emersion/mako&#34;&gt;mako&lt;/a&gt; is a notification daemon.&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;sudo pacman -S mako&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;sway config:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;exec mako --default-timeout 5000 &amp;amp;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;exec mako --default-timeout 5000 &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;redshift&#34;&gt;redshift&lt;/h3&gt;
-
 &lt;p&gt;if you used redshift before, you will notice that it doesnt work. there is an aur for a patched version: &lt;a href=&#34;https://aur.archlinux.org/packages/redshift-wayland-git/&#34;&gt;redshift-wayland-git&lt;/a&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;networkmanager-applet&#34;&gt;NetworkManager Applet&lt;/h3&gt;
-
 &lt;p&gt;unfortunately the nm-applet is not showing on wayland. i just started to use &amp;ldquo;NetworkManager text user interface&amp;rdquo;, &lt;code&gt;nmtui&lt;/code&gt;, instead.&lt;/p&gt;
-
 &lt;h2 id=&#34;not-really-sway-related-but-tricky-on-wayland&#34;&gt;not really sway-related, but tricky on wayland&lt;/h2&gt;
-
 &lt;h3 id=&#34;fixing-intellij&#34;&gt;fixing intellij&lt;/h3&gt;
-
 &lt;p&gt;intellij starts with a blank window. the problem (and the solution) is described &lt;a href=&#34;https://github.com/swaywm/sway/issues/595&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;short version: fix it by adding &lt;code&gt;_JAVA_AWT_WM_NONREPARENTING=1&lt;/code&gt; to /etc/environment.&lt;/p&gt;
-
 &lt;h3 id=&#34;finding-out-which-application-is-x-or-wayland&#34;&gt;finding out which application is X or wayland&lt;/h3&gt;
-
 &lt;p&gt;if you want to find out which applications are running on wayland, you can just start xeyes. the eyes only follow the cursor on X applications. :)&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;sudo pacman -S xorg-xeyes&lt;/code&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;running-firefox-on-wayland&#34;&gt;running firefox on wayland&lt;/h3&gt;
-
 &lt;p&gt;normally firefox is an X application, but you can set&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;MOZ_ENABLE_WAYLAND=1&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;and it will use wayland. just throw it in your /etc/environment, same as the intellij fix!&lt;/p&gt;</description>
     </item>
     <item>
@@ -292,9 +295,8 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec&lt;/pre&gt;&lt;/div&gt
       <pubDate>Fri, 13 Sep 2019 20:04:27 +0200</pubDate>
       <guid>//puhoy.github.io/posts/releasing_on_pypi/</guid>
       <description>&lt;p&gt;some notes on packaging &amp;amp; releasing python modules on pypi&lt;/p&gt;
-
 &lt;h2 id=&#34;example-project-structure&#34;&gt;example project structure&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;mypackage
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;mypackage
     mypackage
         module1
             __init__.py
@@ -307,11 +309,9 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec&lt;/pre&gt;&lt;/div&gt
     setup.py
     MANIFEST.in
     LICENSE
-    README.md&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;needed-files&#34;&gt;needed files&lt;/h2&gt;
-
-&lt;h3 id=&#34;setup-py&#34;&gt;setup.py&lt;/h3&gt;
-
+    README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;needed-files&#34;&gt;needed files&lt;/h2&gt;
+&lt;h3 id=&#34;setuppy&#34;&gt;setup.py&lt;/h3&gt;
 &lt;p&gt;(based on &lt;a href=&#34;https://packaging.python.org/tutorials/packaging-projects/&#34;&gt;https://packaging.python.org/tutorials/packaging-projects/&lt;/a&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; setuptools
 
@@ -346,19 +346,15 @@ setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;setup(
             &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;my_command = mypackage.app:myfunction&amp;#39;&lt;/span&gt;
         ]
     }
-)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4 id=&#34;adding-requirements-to-setup-py&#34;&gt;adding requirements to setup.py&lt;/h4&gt;
-
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-requirements-to-setuppy&#34;&gt;adding requirements to setup.py&lt;/h4&gt;
 &lt;p&gt;there are a lot of discussions on what you should use:
 a &lt;code&gt;requirements.txt&lt;/code&gt; (and then read it programmatically in your &lt;code&gt;setup.py&lt;/code&gt;) or just a list in the &lt;code&gt;setup.py&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;the &lt;a href=&#34;https://packaging.python.org/discussions/install-requires-vs-requirements/&#34;&gt;packaging user guide&lt;/a&gt;
 explains, that &lt;code&gt;install_requires&lt;/code&gt; should specify the minimal, abstract requirements (without any sub-requirements) for your project to run,
 whereas your &lt;code&gt;requirements.txt&lt;/code&gt; contains a long list of pinned versions of all required packages and their requirements.&lt;/p&gt;
-
 &lt;p&gt;also, a &lt;code&gt;requirements.txt&lt;/code&gt; is usually used when you write a service.
 so, its used to describe a whole &amp;ldquo;environment&amp;rdquo; for your service to run in.&lt;/p&gt;
-
 &lt;p&gt;using &lt;code&gt;extras_require&lt;/code&gt;, you can add different &amp;lsquo;levels&amp;rsquo; of requirements.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;some requirements&amp;#39;&lt;/span&gt;]
 dev_requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; requirements &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;additional development requirements&amp;#39;&lt;/span&gt;]
@@ -372,98 +368,84 @@ setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;setup(
             &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;: test_requirements
     },
     &lt;span style=&#34;color:#ff79c6&#34;&gt;...&lt;/span&gt;
-)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;to install the default requirements, run &lt;code&gt;pip install --editable .&lt;/code&gt;
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to install the default requirements, run &lt;code&gt;pip install --editable .&lt;/code&gt;
 or, for the dev environment, &lt;code&gt;pip install -e .[dev]&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;manifest-in&#34;&gt;MANIFEST.in&lt;/h3&gt;
-
+&lt;h3 id=&#34;manifestin&#34;&gt;MANIFEST.in&lt;/h3&gt;
 &lt;p&gt;if you set &lt;code&gt;include_package_data&lt;/code&gt; to &lt;code&gt;True&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
 you enabled &lt;code&gt;MANIFEST.in&lt;/code&gt;. all files specified here are added to your distribution.&lt;/p&gt;
-
 &lt;p&gt;its probably a good idea to use whatever is in your file system:
 (&lt;a href=&#34;https://blog.ionelmc.ro/presentations/packaging/#slide:13&#34;&gt;source&lt;/a&gt;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;graft mypackage docs
-global&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;exclude &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.py[cod] __pycache__ &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.so&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;tests&#34;&gt;tests&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;graft mypackage docs
+global&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;exclude &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.py[cod] __pycache__ &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tests&#34;&gt;tests&lt;/h2&gt;
 &lt;p&gt;if you are writing a library its probably a good idea to test your code on different python versions.
 i found travis really good for that.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;language: python
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;language&lt;/span&gt;: python
 
-matrix:
-  include:
-    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.5&amp;#34;&lt;/span&gt;
-      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.5&amp;#34;&lt;/span&gt;
-      dist: xenial
+&lt;span style=&#34;color:#ff79c6&#34;&gt;matrix&lt;/span&gt;:
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;include&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ff79c6&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.5&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;python&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.5&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;dist&lt;/span&gt;: xenial
 
-    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.6&amp;#34;&lt;/span&gt;
-      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
-      dist: xenial
+    - &lt;span style=&#34;color:#ff79c6&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.6&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;python&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;dist&lt;/span&gt;: xenial
 
-    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.7&amp;#34;&lt;/span&gt;
-      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.7&amp;#34;&lt;/span&gt;
-      dist: xenial
+    - &lt;span style=&#34;color:#ff79c6&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xenial 3.7&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;python&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.7&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;dist&lt;/span&gt;: xenial
 
-    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;osx 3.7&amp;#34;&lt;/span&gt;
-      os: osx
-      osx_image: xcode10&lt;span style=&#34;color:#bd93f9&#34;&gt;.2&lt;/span&gt;  &lt;span style=&#34;color:#6272a4&#34;&gt;# Python 3.7.2 running on macOS 10.14.3&lt;/span&gt;
-      language: shell       &lt;span style=&#34;color:#6272a4&#34;&gt;# &amp;#39;language: python&amp;#39; is an error on Travis CI macOS&lt;/span&gt;
-      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.7&amp;#34;&lt;/span&gt;
+    - &lt;span style=&#34;color:#ff79c6&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;osx 3.7&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;os&lt;/span&gt;: osx
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;osx_image&lt;/span&gt;: xcode10&lt;span style=&#34;color:#bd93f9&#34;&gt;.2&lt;/span&gt;  &lt;span style=&#34;color:#6272a4&#34;&gt;# Python 3.7.2 running on macOS 10.14.3&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;language: shell       # &amp;#39;language&lt;/span&gt;: python&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39; is an error on Travis CI macOS
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      python: &amp;#34;3.7&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    - name: &amp;#34;osx 3.6&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      os: osx
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      osx_image: xcode10.2  # Python 3.7.2 running on macOS 10.14.3
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      language: shell       # &amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;language&lt;/span&gt;: python&amp;#39; is an error on Travis CI macOS
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;python&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
 
-    - name: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;osx 3.6&amp;#34;&lt;/span&gt;
-      os: osx
-      osx_image: xcode10&lt;span style=&#34;color:#bd93f9&#34;&gt;.2&lt;/span&gt;  &lt;span style=&#34;color:#6272a4&#34;&gt;# Python 3.7.2 running on macOS 10.14.3&lt;/span&gt;
-      language: shell       &lt;span style=&#34;color:#6272a4&#34;&gt;# &amp;#39;language: python&amp;#39; is an error on Travis CI macOS&lt;/span&gt;
-      python: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.6&amp;#34;&lt;/span&gt;
-
-install: pip3 install -e .[test] || pip install -e .[test]
+&lt;span style=&#34;color:#ff79c6&#34;&gt;install&lt;/span&gt;: pip3 install -e .[test] || pip install -e .[test]
 
 &lt;span style=&#34;color:#6272a4&#34;&gt;# https://docs.travis-ci.com/user/languages/python/#running-python-tests-on-multiple-operating-systems&lt;/span&gt;
-script: python3 -m pytest || python -m pytest
+&lt;span style=&#34;color:#ff79c6&#34;&gt;script&lt;/span&gt;: python3 -m pytest || python -m pytest
 
 &lt;span style=&#34;color:#6272a4&#34;&gt;# Push the results back to codecov&lt;/span&gt;
-after_success:
-  - codecov&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(another option would be &lt;a href=&#34;https://tox.readthedocs.io/en/latest/&#34;&gt;tox&lt;/a&gt;, but i never actually tried that)&lt;/p&gt;
-
+&lt;span style=&#34;color:#ff79c6&#34;&gt;after_success&lt;/span&gt;:
+  - codecov
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(another option would be &lt;a href=&#34;https://tox.readthedocs.io/en/latest/&#34;&gt;tox&lt;/a&gt;, but i never actually tried that)&lt;/p&gt;
 &lt;h2 id=&#34;versioning&#34;&gt;versioning&lt;/h2&gt;
-
 &lt;p&gt;you can use &lt;a href=&#34;https://github.com/c4urself/bump2version&#34;&gt;bump2version&lt;/a&gt; to update the version where needed.
 just put a &lt;code&gt;.bumpversion.cfg&lt;/code&gt; in the root of your project, and bump your version with &lt;code&gt;bump2version [patch|minor|major]&lt;/code&gt; (use &lt;code&gt;--dry-run&lt;/code&gt; to see the changes before running the actual bump command!)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;[bumpversion]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;[bumpversion]
 current_version = 0.4.1
 commit = True
 tag = True
 
 [bumpversion:file:setup.py]
 search = version=&amp;#39;{current_version}&amp;#39;
-replace = version=&amp;#39;{new_version}&amp;#39;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;actual-releasing-on-pypi&#34;&gt;actual releasing on pypi&lt;/h2&gt;
-
+replace = version=&amp;#39;{new_version}&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;actual-releasing-on-pypi&#34;&gt;actual releasing on pypi&lt;/h2&gt;
 &lt;h3 id=&#34;building-your-distribution&#34;&gt;building your distribution&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;python3 setup.py sdist bdist_wheel&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;builds the source and binary distributions&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;python3 setup.py sdist bdist_wheel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;builds the source and binary distributions&lt;/p&gt;
 &lt;h3 id=&#34;releasing-on-pypi&#34;&gt;releasing on pypi&lt;/h3&gt;
-
 &lt;p&gt;you can use &lt;a href=&#34;https://pypi.org/project/twine/&#34;&gt;twine&lt;/a&gt;
 to upload your created package to pypi.&lt;/p&gt;
-
 &lt;p&gt;to test, you can release it on &lt;code&gt;testpypi&lt;/code&gt; first&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;twine upload --verbose --repository testpypi dist/*&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&amp;hellip;and the install from test pypi&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pip install -i https://test.pypi.org/simple/ mypackage&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;to release on pypi, run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;twine upload --verbose --repository pypi dist/*&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;stuff-to-read&#34;&gt;stuff to read&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;twine upload --verbose --repository testpypi dist/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;hellip;and the install from test pypi&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pip install -i https://test.pypi.org/simple/ mypackage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to release on pypi, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;twine upload --verbose --repository pypi dist/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;stuff-to-read&#34;&gt;stuff to read&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.ionelmc.ro/presentations/packaging/&#34;&gt;https://blog.ionelmc.ro/presentations/packaging/&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&amp;ldquo;Less known packaging features and tricks&amp;rdquo; - a nice presentation about packaging&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://packaging.python.org/overview/&#34;&gt;https://packaging.python.org/overview/&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;the python packaging guide. a lot to read.&lt;/p&gt;</description>
     </item>
     <item>
@@ -473,32 +455,28 @@ to upload your created package to pypi.&lt;/p&gt;
       <guid>//puhoy.github.io/posts/syncthing_protocol_buffers/</guid>
       <description>&lt;p&gt;turns out, hacking something in python to play with syncthing is not too hard,
 since they used &lt;a href=&#34;https://developers.google.com/protocol-buffers/&#34;&gt;protocol buffers&lt;/a&gt; to define their protocols for local discovery and block exchange!&lt;/p&gt;
-
 &lt;p&gt;that means, we can just generate code to parse the packets! :)&lt;/p&gt;
-
 &lt;h3 id=&#34;install-protobuf-package&#34;&gt;install protobuf package&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pacman -S protobuf  # depending on your distro&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;clone-syncthing-requirements&#34;&gt;clone syncthing &amp;amp; requirements&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;git clone https://github.com/syncthing/syncthing.git
+&lt;pre&gt;&lt;code&gt;pacman -S protobuf  # depending on your distro
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;clone-syncthing--requirements&#34;&gt;clone syncthing &amp;amp; requirements&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/syncthing/syncthing.git
 cd syncthing
-git clone https://github.com/gogo/protobuf.git repos/protobuf&lt;/pre&gt;&lt;/div&gt;
+git clone https://github.com/gogo/protobuf.git repos/protobuf
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;generate-protobuf&#34;&gt;generate protobuf&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;# in a new folder, somewhere else
-protoc --proto_path PATH/TO/SYNCTHING --python_out=. repos/protobuf/gogoproto/gogo.proto lib/protocol/bep.proto lib/discover/local.proto&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;# in a new folder, somewhere else
+protoc --proto_path PATH/TO/SYNCTHING --python_out=. repos/protobuf/gogoproto/gogo.proto lib/protocol/bep.proto lib/discover/local.proto
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;this generates generates a &lt;code&gt;lib/&lt;/code&gt; folder, containing our code.&lt;/p&gt;
-
 &lt;h2 id=&#34;example-reading-local-discovery-announcement-or-the-hello-world-of-the-syncthing-protocol&#34;&gt;example: reading local discovery announcement (or: the hello world of the syncthing protocol)&lt;/h2&gt;
-
 &lt;p&gt;the exact specifications for the local discover are &lt;a href=&#34;https://docs.syncthing.net/specs/localdisco-v4.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;in short, this says:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;packets will be broadcasted to port 21027, UDP.&lt;/li&gt;
 &lt;li&gt;a packet starts with a 32bit magic field, containing 0x2EA7D90B in big endian.
 that means, if a packet starts with this value, its one of our announcement packets!&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;the code to create a socket, wait for a packet and read it would look like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; socket
 
@@ -523,27 +501,21 @@ DISCOVERY_MAGIC &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;spa
             announce &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; local_pb2&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Announce()
             announce&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;ParseFromString(packet_data)  &lt;span style=&#34;color:#6272a4&#34;&gt;# parse the packet data&lt;/span&gt;
             
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt;(announce)  &lt;span style=&#34;color:#6272a4&#34;&gt;# aaand were done!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;if there is a local instance of syncthing running in your network, you should get a packet every 30-60 seconds when you run this.&lt;/p&gt;
-
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt;(announce)  &lt;span style=&#34;color:#6272a4&#34;&gt;# aaand were done!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;if there is a local instance of syncthing running in your network, you should get a packet every 30-60 seconds when you run this.&lt;/p&gt;
 &lt;p&gt;the packet that you receive will have&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;a random instance id (generated at startup),&lt;/li&gt;
 &lt;li&gt;a list of addresses where the instance can be found,&lt;/li&gt;
 &lt;li&gt;and the syncthing id, which is the SHA-256 of the devices X.509 certificate.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;more&#34;&gt;more..&lt;/h2&gt;
-
 &lt;p&gt;i guess just reading the local announcements is pretty useless, so if you want to continue on this,
 you want to read the &lt;a href=&#34;https://docs.syncthing.net/specs/&#34;&gt;protocol specification&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;also, you need to generate (or read) rsa keys (&lt;a href=&#34;https://docs.syncthing.net/dev/device-ids.html#device-ids&#34;&gt;-&amp;gt;&lt;/a&gt;),
 make the whole thing non-blocking (maybe by using threads or coroutines),
 need to understand the way more complex &lt;a href=&#34;https://docs.syncthing.net/specs/bep-v1.html&#34;&gt;block exchange protocol&lt;/a&gt;,
 communicate between the socket threads you set up and (most likely) a lot more things.&lt;/p&gt;
-
 &lt;p&gt;i still find it interesting, so there are probably more posts coming on this. :)&lt;/p&gt;</description>
     </item>
     <item>
@@ -552,25 +524,17 @@ communicate between the socket threads you set up and (most likely) a lot more t
       <pubDate>Thu, 11 Jul 2019 14:46:02 +0200</pubDate>
       <guid>//puhoy.github.io/posts/armbian_on_espressobin/</guid>
       <description>&lt;p&gt;how to install &lt;a href=&#34;https://www.armbian.com/espressobin/&#34;&gt;armbian&lt;/a&gt; on espressobin&lt;/p&gt;
-
 &lt;p&gt;things needed:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;ext4 formatted usb stick (to flash the bootloader)&lt;/li&gt;
 &lt;li&gt;sd card (for the os)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;1-updating-the-bootloader&#34;&gt;1. updating the bootloader&lt;/h1&gt;
-
-&lt;h2 id=&#34;1-1-connecting-to-the-espressobin&#34;&gt;1.1 connecting to the espressobin&lt;/h2&gt;
-
+&lt;h2 id=&#34;11-connecting-to-the-espressobin&#34;&gt;1.1 connecting to the espressobin&lt;/h2&gt;
 &lt;p&gt;the espressobin wiki has &lt;a href=&#34;http://wiki.espressobin.net/tiki-index.php?page=Serial+connection+-+Linux&#34;&gt;this guide&lt;/a&gt;,
 which i followed.&lt;/p&gt;
-
 &lt;p&gt;connect the espressobin to your computer (dont plug in the power yet!), and run &lt;code&gt;dmesg&lt;/code&gt; to get the right tty device.&lt;/p&gt;
-
 &lt;p&gt;in my case its /dev/ttyUSB0.&lt;/p&gt;
-
 &lt;p&gt;then, start c-kermit and paste these commands:
 (change /dev/ttyUSB0 to whatever it is in your case!)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;set&lt;/span&gt; line /dev/ttyUSB0
@@ -581,13 +545,10 @@ which i followed.&lt;/p&gt;
 &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;set&lt;/span&gt; prefixing all
 &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;set&lt;/span&gt; streaming off
 &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;set&lt;/span&gt; parity none
-connect&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;after this, you can connect power to the board.&lt;/p&gt;
-
+connect
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;after this, you can connect power to the board.&lt;/p&gt;
 &lt;p&gt;press enter on startup to stop autoboot, to access the bootloader shell.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-2-flashing-the-bootloader&#34;&gt;1.2 flashing the bootloader&lt;/h2&gt;
-
+&lt;h2 id=&#34;12-flashing-the-bootloader&#34;&gt;1.2 flashing the bootloader&lt;/h2&gt;
 &lt;p&gt;in the boot logs you will find the details of yor espressobin model.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;TIM-1.0
 WTMI-armada-17.10.1-4809244
@@ -606,19 +567,19 @@ Exited self-refresh ...
 
 DLL &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;TUNING&lt;/span&gt;
 &lt;span style=&#34;color:#ff79c6&#34;&gt;==============&lt;/span&gt;
-   DLL 0xc0001050&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;21&lt;/span&gt;:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,21,10&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-   DLL 0xc0001050&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;29&lt;/span&gt;:24&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt;,2f,19&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-   DLL 0xc0001054&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;21&lt;/span&gt;:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;,2b,16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-   DLL 0xc0001054&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;29&lt;/span&gt;:24&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;8&lt;/span&gt;,33,1d&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-   DLL 0xc0001074&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;21&lt;/span&gt;:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,3f,1f&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+   DLL 0xc0001050&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;21:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;0,21,10&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+   DLL 0xc0001050&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;29:24&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;4,2f,19&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+   DLL 0xc0001054&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;21:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;2,2b,16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+   DLL 0xc0001054&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;29:24&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;8,33,1d&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+   DLL 0xc0001074&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;21:16&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;0,3f,1f&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
    DLL 0xc0001074NOTICE:  Booting Trusted Firmware
 NOTICE:  BL1: v1.3&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;release&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;:armada-17.10.2:13f2984
-NOTICE:  BL1: Built : &lt;span style=&#34;color:#bd93f9&#34;&gt;14&lt;/span&gt;:29:26, Oct  &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; 2NOTICE:  BL2: v1.3&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;release&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;:armada-17.10.2:13f2984
-NOTICE:  BL2: Built : &lt;span style=&#34;color:#bd93f9&#34;&gt;14&lt;/span&gt;:29:26, Oct  &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2017&lt;/span&gt;
+NOTICE:  BL1: Built : 14:29:26, Oct  &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; 2NOTICE:  BL2: v1.3&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;release&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;:armada-17.10.2:13f2984
+NOTICE:  BL2: Built : 14:29:26, Oct  &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2017&lt;/span&gt;
 NNOTICE:  BL31: v1.3&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;release&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;:armada-17.10.2:13f2984
 NOTICE:  BL31:
 
-U-Boot &lt;span style=&#34;color:#bd93f9&#34;&gt;2017&lt;/span&gt;.03-armada-17.10.1-g440395a &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;Sep &lt;span style=&#34;color:#bd93f9&#34;&gt;25&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2017&lt;/span&gt; - &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;:43:51 +0200&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+U-Boot 2017.03-armada-17.10.1-g440395a &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;Sep &lt;span style=&#34;color:#bd93f9&#34;&gt;25&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2017&lt;/span&gt; - 15:43:51 +0200&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
 
 Model: Marvell Armada &lt;span style=&#34;color:#bd93f9&#34;&gt;3720&lt;/span&gt; Community Board ESPRESSOBin
        CPU    @ &lt;span style=&#34;color:#bd93f9&#34;&gt;1000&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;MHz&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
@@ -628,30 +589,26 @@ Model: Marvell Armada &lt;span style=&#34;color:#bd93f9&#34;&gt;3720&lt;/span&gt
 DRAM:  &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; GiB
 U-Boot DT blob at : 000000003f7182d8
 Comphy-0: USB3          &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt; Gbps    
-Comphy-1: PEX0          &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;.5 Gbps  
+Comphy-1: PEX0          2.5 Gbps  
 Comphy-2: SATA0         &lt;span style=&#34;color:#bd93f9&#34;&gt;6&lt;/span&gt; Gbps    
 SATA link &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt; timeout.
-AHCI &lt;span style=&#34;color:#bd93f9&#34;&gt;0001&lt;/span&gt;.0300 &lt;span style=&#34;color:#bd93f9&#34;&gt;32&lt;/span&gt; slots &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; ports &lt;span style=&#34;color:#bd93f9&#34;&gt;6&lt;/span&gt; Gbps 0x1 impl SATA mode
+AHCI 0001.0300 &lt;span style=&#34;color:#bd93f9&#34;&gt;32&lt;/span&gt; slots &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; ports &lt;span style=&#34;color:#bd93f9&#34;&gt;6&lt;/span&gt; Gbps 0x1 impl SATA mode
 flags: ncq led only pmp fbss pio slum part sxs 
 PCIE-0: Link down
 MMC:   sdhci@d0000: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
 SF: Detected w25q32dw with page size &lt;span style=&#34;color:#bd93f9&#34;&gt;256&lt;/span&gt; Bytes, erase size &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; KiB, total &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt; MiB
-Net:   eth0: neta@30000 &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;PRIME&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for my board, thats 1GB(2x 512MB) DDR3 ram on 800Mhz and 1Ghz cpu.&lt;/p&gt;
-
+Net:   eth0: neta@30000 &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;PRIME&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for my board, thats 1GB(2x 512MB) DDR3 ram on 800Mhz and 1Ghz cpu.&lt;/p&gt;
 &lt;p&gt;with this information, get the right file from &lt;a href=&#34;https://dl.armbian.com/espressobin/u-boot/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;the specs in the filenames are in the format MEM-RAM_CHIPS-CPU_DDR, so i get &lt;code&gt;flash-image-ddr3-1g-2cs-1000_800.bin&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;put this file on your ext4 formatted usb stick and plug it in your espressobin.
 (the armbian docs say you have to use a FAT formatted usb stick,
 but the board did not recognize the usb stick - so i just went with the
 &lt;a href=&#34;http://wiki.espressobin.net/tiki-index.php?page=Update+the+Bootloader#USB_stick_or_SD_card&#34;&gt;espressobin docs&lt;/a&gt;
 and used ext4, which worked)&lt;/p&gt;
-
 &lt;p&gt;now you can flash the bootloader:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Marvell&amp;gt;&amp;gt; bubt flash-image-MEM-RAM_CHIPS-CPU_DDR.bin spi usb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;with the new bootloader, a new bootscript is needed. run:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Marvell&amp;gt;&amp;gt; bubt flash-image-MEM-RAM_CHIPS-CPU_DDR.bin spi usb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;with the new bootloader, a new bootscript is needed. run:
 (the snippet is copied from here &lt;a href=&#34;https://www.armbian.com/espressobin/&#34;&gt;https://www.armbian.com/espressobin/&lt;/a&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;env default -a
 setenv fdt_addr 0x6000000
@@ -672,25 +629,19 @@ setenv bootcmd &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;for target in 
 setenv scan_dev_for_boot &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;for prefix in ${boot_prefixes}; do echo ${prefix};run boot_a_script; done&amp;#39;&lt;/span&gt;
 setenv boot_a_script &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;ext4load ${boot_interface} ${devnum}:1 ${scriptaddr} ${prefix}boot.scr;source ${scriptaddr};&amp;#39;&lt;/span&gt;
 saveenv
-&lt;span style=&#34;color:#6272a4&#34;&gt;# Including this line to make sure saveenv is executed.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for some reason, when just pasting the whole block to the shell, there were some characters missing -
+&lt;span style=&#34;color:#6272a4&#34;&gt;# Including this line to make sure saveenv is executed.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for some reason, when just pasting the whole block to the shell, there were some characters missing -
 so i had to paste it line by line&amp;hellip; :/&lt;/p&gt;
-
 &lt;h1 id=&#34;2-installing-armbian&#34;&gt;2. installing armbian&lt;/h1&gt;
-
 &lt;p&gt;after you upgraded the bootloader, get your armbian image.
 download the version you want (from &lt;a href=&#34;https://www.armbian.com/espressobin/&#34;&gt;armbian.com/espressobin&lt;/a&gt;)
 unpack it, and dd the file to your sd card:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo dd &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;Desktop/Armbian_XYZ.img &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;of&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;/dev/sdX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;flashing will probably take a few minutes. grab a coffee. :)&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo dd &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;Desktop/Armbian_XYZ.img &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;of&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;/dev/sdX
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;flashing will probably take a few minutes. grab a coffee. :)&lt;/p&gt;
 &lt;p&gt;when its finished, plug the sd card in your espressobin and restart - it should boot into your new debian!&lt;/p&gt;
-
 &lt;p&gt;the default login is &lt;code&gt;root / 1234&lt;/code&gt;. you will need to change the password on first boot, and also create a user.&lt;/p&gt;
-
 &lt;p&gt;after this its safe to unplug the board and connect it to your router,
 connect via ssh, run updates, have some debian fun. :)&lt;/p&gt;
-
 &lt;p&gt;after connecting via ssh, i noticed that the remote terminal was behaving a bit weird.
 was fixed after i set &lt;code&gt;TERM=xterm-256color&lt;/code&gt;.&lt;/p&gt;</description>
     </item>

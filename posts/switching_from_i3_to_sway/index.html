@@ -2,14 +2,16 @@
 <html lang="">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.57.2" />
-  <meta itemprop="name" content="switching from i3 to sway">
-<meta itemprop="description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+<meta name="description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
 here are some snippets on what i did to make everything working on archlinux and manjaro.">
 
 
+<meta itemprop="name" content="switching from i3 to sway">
+<meta itemprop="description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
+here are some snippets on what i did to make everything working on archlinux and manjaro.">
 <meta itemprop="datePublished" content="2019-10-27T18:45:45&#43;02:00" />
 <meta itemprop="dateModified" content="2019-10-27T18:45:45&#43;02:00" />
 <meta itemprop="wordCount" content="937">
@@ -17,21 +19,20 @@ here are some snippets on what i did to make everything working on archlinux and
 
 
 <meta itemprop="keywords" content="sway,snippets,guide,linux," />
-
-  <meta property="og:title" content="switching from i3 to sway" />
+<meta property="og:title" content="switching from i3 to sway" />
 <meta property="og:description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
-
 here are some snippets on what i did to make everything working on archlinux and manjaro." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="//puhoy.github.io/posts/switching_from_i3_to_sway/" />
 <meta property="article:published_time" content="2019-10-27T18:45:45+02:00" />
 <meta property="article:modified_time" content="2019-10-27T18:45:45+02:00" />
 
-  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="switching from i3 to sway"/>
 <meta name="twitter:description" content="a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.
-
 here are some snippets on what i did to make everything working on archlinux and manjaro."/>
+
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>
     
@@ -47,7 +48,7 @@ here are some snippets on what i did to make everything working on archlinux and
   
   
   
-  <link rel="stylesheet" href="//puhoy.github.io/css/base.min.1747f5eca91a5a12cd98ce1c774170bd7fa4361afd1c162494a20aa52d431089.css" integrity="sha256-F0f17KkaWhLNmM4cd0FwvX&#43;kNhr9HBYklKIKpS1DEIk=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//puhoy.github.io/css/base.min.6a14e6740937e0229cb1c8dd5dd0b6ce2e8707b2b96533719c4db51cd4096829.css" integrity="sha256-ahTmdAk34CKcscjdXdC2zi6HB7K5ZTNxnE21HNQJaCk=" crossorigin="anonymous">
   
   
 </head>
@@ -97,52 +98,40 @@ here are some snippets on what i did to make everything working on archlinux and
 </header>
 
   <p>a few months back i switched from i3 to sway. since this is a &ldquo;wayland compositor&rdquo; and not an X11 window manager, i needed to switch some tools around the wm as well.</p>
-
 <p>here are some snippets on what i did to make everything working on archlinux and manjaro.</p>
-
 <h2 id="installation">installation</h2>
-
 <p>just install <code>sway</code>, along with <code>swayidle</code> and <code>swaylock</code> (to lock the screen on inactivity), and <code>xorg-xserver-wayland</code> to run X11 applications on wayland.</p>
-
 <p><code>sudo pacman -S sway swayidle swaylock xorg-xserver-wayland</code></p>
-
 <h2 id="configuration">configuration</h2>
-
 <p>-&gt; <a href="https://github.com/swaywm/sway/wiki#configuration">sway wiki</a></p>
-
 <p>the config file is located at <code>~/.config/sway/config</code>.</p>
-
 <p>if you dont have that, you can copy a default config from <code>/etc/sway/config</code>.</p>
-
 <p>adapt the following things to your needs, and add them to your sway config!</p>
-
 <h3 id="keyboard-layout">keyboard layout</h3>
-
 <p>-&gt; <a href="https://github.com/swaywm/sway/wiki#input-configuration">sway wiki / inputs</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">input * xkb_layout &#34;de&#34;</pre></div>
-<h3 id="swayidle-swaylock">swayidle / swaylock</h3>
-
+<pre><code>input * xkb_layout &quot;de&quot;
+</code></pre>
+<h3 id="swayidle--swaylock">swayidle / swaylock</h3>
 <p>use swayidle to run a command on inactivity.</p>
-
 <p>i turn off all outputs after 300s of inactivity, and lock the screen after 600s and &ldquo;before sleep&rdquo;.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">exec swayidle -w \
-      timeout 600 &#39;swaylock -f -c 000000&#39; \
-      timeout 300 &#39;swaymsg &#34;output * dpms off&#34;&#39; \
-           resume &#39;swaymsg &#34;output * dpms on&#34;&#39; \
-      before-sleep &#39;swaylock -f -c 000000&#39;</pre></div>
+<pre><code>exec swayidle -w \
+      timeout 600 'swaylock -f -c 000000' \
+      timeout 300 'swaymsg &quot;output * dpms off&quot;' \
+           resume 'swaymsg &quot;output * dpms on&quot;' \
+      before-sleep 'swaylock -f -c 000000'
+</code></pre>
 <p>also, i bind mod+escape to swaylock to lock manually. (<code>-f</code> daemonizes, <code>-c 000000</code> sets a black screen)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bindsym $mod+Escape exec swaylock -f -c 000000</pre></div>
+<pre><code>bindsym $mod+Escape exec swaylock -f -c 000000
+</code></pre>
 <h3 id="displays">displays</h3>
-
 <p>-&gt; <a href="https://github.com/swaywm/sway/wiki#display-configuration">sway wiki / displays</a></p>
-
 <p>if you dont switch screens a lot, its probably fine to just define your config in your sway config file. just get the available modes from <code>swaymsg -t get_outputs</code>, and set something like</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">output HDMI1 pos 0 0 res 1920x1080
-output eDP1 pos 1920 0 res 1600x900 </pre></div>
+<pre><code>output HDMI1 pos 0 0 res 1920x1080
+output eDP1 pos 1920 0 res 1600x900 
+</code></pre>
 <p>instead of the port (<code>HDMI1</code>, <code>eDP1</code>) you can also use the name found in <code>get_outputs</code>!</p>
-
 <p>the coordinates (<code>pos 0 0</code>) are starting in the upper left and grow right and downwards. the result will look something like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">x y
+<pre><code>x y
 0 0                1920 0
   +------------------+---------------+
   |                  |               |
@@ -151,111 +140,80 @@ output eDP1 pos 1920 0 res 1600x900 </pre></div>
   |                  |               |
   |                  +---------------+
   |                  |
-  +------------------+</pre></div>
+  +------------------+
+</code></pre>
 <p>if you want to scale your screens, you can do so by setting <code>output HDMI1 scale 2</code>. in this case, the x-coordinate of the second screen is <code>1920*2</code>, 3840!</p>
-
 <p>the sway wiki does not recommend fractional scaling, but i never had issues with this and i like to run my hidpi screens on a scale around <code>1.6</code>.</p>
-
 <h4 id="kanshi">kanshi</h4>
-
 <p>if you switch your displays often, eg. you connect your laptop to different screens with different setups, <a href="https://github.com/emersion/kanshi">kanshi</a> (<a href="https://aur.archlinux.org/packages/kanshi-git/">arch user repo</a>) is a nice tool to handle the configuration.</p>
-
 <p>the idea is that you describe your different display setups, and when all displays in a setup are connected, the config will be applied.</p>
-
 <p>to start, create a new config file in <code>.config/kanshi/config</code>.
 the syntax is a bit different from the sway config syntax.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{
+<pre><code>{
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
 }
 
 {
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
-    output &#34;Some Display 0x0123&#34; enable scale 2 mode 3840x2160 position 1600,0
+    output &quot;Some Display 0x0123&quot; enable scale 2 mode 3840x2160 position 1600,0
 }
 
 {
     output eDP-1 enable scale 1.6 mode 2560x1440 position 0,0
-    output &#34;Another Display&#34; enable scale 1.3 mode 2560x1440 position 1600,0
-}</pre></div>
+    output &quot;Another Display&quot; enable scale 1.3 mode 2560x1440 position 1600,0
+}
+</code></pre>
 <p>after you saved your config, try by starting kanshi: <code>kanshi</code>.</p>
-
 <p>if everything works as you expect, add <code>exec kanshi &amp;</code> to your sway config to run kanshi when you start sway!</p>
-
 <h3 id="brightness">brightness</h3>
-
 <p>to control screen brightness i decided to use <code>brightnessctl</code>. (i used <a href="https://github.com/haikarainen/light">light</a> before, but <code>brightnessctl</code> is in the arch repos.)</p>
-
 <p>just run <code>sudo pacman -S brightnessctl</code> to install, and add your user to the <code>video</code> group with <code>sudo usermod -aG video USERNAME</code>. otherwise, you wont be allowed to change brightness.</p>
-
 <p>in sway config, add</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-</pre></div>
+<pre><code>bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+</code></pre>
 <p>to bind the keys to the <code>brightnessctl</code> commands.</p>
-
 <h3 id="hiding-cursors-on-inactivity">hiding cursors on inactivity</h3>
-
 <p>i like to not see the curser when i dont use it. just add this to the sway config.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">seat * hide_cursor 8000</pre></div>
+<pre><code>seat * hide_cursor 8000
+</code></pre>
 <h2 id="other-replacements">other replacements</h2>
-
-<h3 id="dmenu-bemenu">dmenu -&gt; bemenu</h3>
-
+<h3 id="dmenu---bemenu">dmenu -&gt; bemenu</h3>
 <p>since <code>dmenu</code> is x11, you could switch to <code>bemenu</code>. it feels the same, but is wayland.</p>
-
 <p><code>sudo pacman -S bemenu</code></p>
-
 <p>in sway config:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">set $bemenu_options -i --nb &#34;#3f3f3f&#34; --nf &#34;#dcdccc&#34; --fn &#34;pango:DejaVu Sans Mono 12&#34;
+<pre><code>set $bemenu_options -i --nb &quot;#3f3f3f&quot; --nf &quot;#dcdccc&quot; --fn &quot;pango:DejaVu Sans Mono 12&quot;
 set $menu_command bemenu $bemenu_options
-set $menu dmenu_path | $menu_command | xargs swaymsg exec</pre></div>
+set $menu dmenu_path | $menu_command | xargs swaymsg exec
+</code></pre>
 <h3 id="screenshots">screenshots</h3>
-
 <p>for screenshots, i use a combination of <a href="https://github.com/emersion/grim">grim</a> and <a href="https://github.com/emersion/slurp">slurp</a>.</p>
-
 <p><code>slurp</code> lets you select a region on screen and prints the coordinates, which you can use as input for <code>grim</code>, which then creates the actual screenshot.</p>
-
 <p>in the end, i pipe the output to <code>wl-copy</code> (which is part of <code>wl-clipboard</code>), to paste it wherever i need it.</p>
-
 <p><code>sudo pacman -S grim slurp wl-clipboard</code></p>
-
 <p>sway config:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bindsym $mod+Print exec grim -g &#34;$(slurp)&#34; - | wl-copy</pre></div>
+<pre><code>bindsym $mod+Print exec grim -g &quot;$(slurp)&quot; - | wl-copy
+</code></pre>
 <h3 id="notifications">notifications</h3>
-
 <p><a href="https://github.com/emersion/mako">mako</a> is a notification daemon.</p>
-
 <p><code>sudo pacman -S mako</code></p>
-
 <p>sway config:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">exec mako --default-timeout 5000 &amp;</pre></div>
+<pre><code>exec mako --default-timeout 5000 &amp;
+</code></pre>
 <h3 id="redshift">redshift</h3>
-
 <p>if you used redshift before, you will notice that it doesnt work. there is an aur for a patched version: <a href="https://aur.archlinux.org/packages/redshift-wayland-git/">redshift-wayland-git</a></p>
-
 <h3 id="networkmanager-applet">NetworkManager Applet</h3>
-
 <p>unfortunately the nm-applet is not showing on wayland. i just started to use &ldquo;NetworkManager text user interface&rdquo;, <code>nmtui</code>, instead.</p>
-
 <h2 id="not-really-sway-related-but-tricky-on-wayland">not really sway-related, but tricky on wayland</h2>
-
 <h3 id="fixing-intellij">fixing intellij</h3>
-
 <p>intellij starts with a blank window. the problem (and the solution) is described <a href="https://github.com/swaywm/sway/issues/595">here</a></p>
-
 <p>short version: fix it by adding <code>_JAVA_AWT_WM_NONREPARENTING=1</code> to /etc/environment.</p>
-
 <h3 id="finding-out-which-application-is-x-or-wayland">finding out which application is X or wayland</h3>
-
 <p>if you want to find out which applications are running on wayland, you can just start xeyes. the eyes only follow the cursor on X applications. :)</p>
-
 <p><code>sudo pacman -S xorg-xeyes</code></p>
-
 <h3 id="running-firefox-on-wayland">running firefox on wayland</h3>
-
 <p>normally firefox is an X application, but you can set</p>
-
 <p><code>MOZ_ENABLE_WAYLAND=1</code></p>
-
 <p>and it will use wayland. just throw it in your /etc/environment, same as the intellij fix!</p>
   
 
@@ -271,29 +229,21 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec</pre></div>
   
   <ul class="Tags">
     
-    
     <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/sway/" rel="tag">sway</a>
+      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/linux/" rel="tag">linux</a>
     </li>
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/snippets/" rel="tag">snippets</a>
-    </li>
-    
-    
     
     <li class="Tags-item u-background">
       <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/guide/" rel="tag">guide</a>
     </li>
     
-    
-    
     <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/linux/" rel="tag">linux</a>
+      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/snippets/" rel="tag">snippets</a>
     </li>
     
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="//puhoy.github.io/tags/sway/" rel="tag">sway</a>
+    </li>
     
   </ul>
   
