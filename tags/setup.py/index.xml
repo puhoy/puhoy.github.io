@@ -9,6 +9,66 @@
     <lastBuildDate>Fri, 13 Sep 2019 20:04:27 +0200</lastBuildDate>
     <atom:link href="//puhoy.github.io/tags/setup.py/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bücher scannen</title>
+      <link>//puhoy.github.io/posts/2022-07-04_buecher_scannen/</link>
+      <pubDate>Sat, 27 Aug 2022 21:31:39 +0200</pubDate>
+      <guid>//puhoy.github.io/posts/2022-07-04_buecher_scannen/</guid>
+      <description>&lt;p&gt;Ein kurzes Runterschreib zum Bücher scannen!&lt;/p&gt;
+&lt;p&gt;Ich wollte neulich ein Buch scannen, ohne jegliches Vorwissen.&lt;/p&gt;
+&lt;p&gt;Mein erster Gedanke war: Handyfotos, Pythonscript um die Kanten zu erkennen, Tesseract zur Texterkennung der fertigen pdf.&lt;br&gt;
+Mein zweiter Gedanke war: da wirst du ja blöd bei. Ausserdem machst du das eh nie.&lt;/p&gt;
+&lt;p&gt;Also hab ich eine Nacht drüber geschlafen - und dann mal gegoogelt, und festgestellt dass die Zentralbibliothek hier einen Buchscanner hat.&lt;/p&gt;
+&lt;h2 id=&#34;buchscanner-bibliotheken-sind-dein-freund&#34;&gt;Buchscanner (Bibliotheken sind dein Freund!)&lt;/h2&gt;
+&lt;p&gt;Ich bin dann also an einem Wochenende zwischen zwei Terminen mal hin, und hab mir das Teil angeschaut.&lt;/p&gt;
+&lt;p&gt;Was man dort findet, ist in dem Fall ein Windows im Kioskmodus, auf dem ein seltsam zu bedienendes Scanprogramm läuft.&lt;/p&gt;
+&lt;p&gt;Ich hab dann ein bisschen rumgedrückt (das Ding hat einen Touchscreen) und geschaut was man so alles haben möchte.
+Im ersten Anlauf wollte ich: doppelseitig scannen, alles in schwarzweiß (keine Graustufen - das Buch war tatsächlich nur schwarz oder weiß gedruckt), und multipage Pdf. Ich will ja schließlich einfach ein großes Pdf.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;denkste.&lt;br&gt;
+Nach 30 Doppelseiten oderso stürzt das Programm ab.
+Ich nehme an, da war einfach der Arbeitsspeicher voll, es hat nämlich nie auf meinen mitgebrachten USB Stick zwischengespeichert.&lt;/p&gt;
+&lt;p&gt;Da die Kiste im Kioskmodus läuft, konnte ich auch nix weiter machen, das Programm war halt einfach tot. Ich hatte aber eh schon keine Zeit mehr, hab also nur noch an der Information Bescheid gesagt dass ichs kaputt gespielt hab, und bin wieder nachhause gefahren.&lt;/p&gt;
+&lt;h2 id=&#34;zweiter-anlauf-und-die-einstellungen-die-man-tatsächlich-machen-will&#34;&gt;Zweiter Anlauf (und die Einstellungen die man tatsächlich machen will)&lt;/h2&gt;
+&lt;p&gt;Ein paar Tage später war ich nochmal da, und es lief alles wieder.&lt;/p&gt;
+&lt;p&gt;Ums kurz zu machen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bringt einen FAT formatierten USB Stick mit (die sind normalerweise schon so vorformatiert, wenn ihr die kauft)&lt;/li&gt;
+&lt;li&gt;doppelseitige Pdf, geteilt in der Mitte (die Einstellung heißt irgendwas mit Falz, glaube ich)&lt;/li&gt;
+&lt;li&gt;schwarzweiß, keine Graustufen - aber das hängt vom Buch ab, das gescannt werden soll&lt;/li&gt;
+&lt;li&gt;KEIN Multipage! Für ein 600-Seiten-Buch wollt ihr 300 pdfs mit jeweils 2 Seiten!&lt;/li&gt;
+&lt;li&gt;OCR (Optical Character Recognition, Texterkennung) - ist nice to have. Dann könnt ihr nachher bequem in der Pdf suchen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wenn ihr das alles eingestellt habt, ist es nurnoch Fleißarbeit.&lt;br&gt;
+Ihr blättert also ein paar hundert mal um, und geht mit genau so vielen Dateien nachhause.&lt;/p&gt;
+&lt;p&gt;Ich hab noch den Fehler gemacht, &amp;ldquo;schlechte&amp;rdquo; Scans nicht sofort zu löschen. Manchmal funktioniert die Kantenerkennung nicht richtig, und man hat einen zu großen Ausschnitt fotografiert. In dem Fall hab ich noch einen Scan gemacht, und die überflüssigen durfte ich dann Zuhause raussuchen und löschen.&lt;/p&gt;
+&lt;h2 id=&#34;pdfs-zusammensetzen&#34;&gt;Pdfs zusammensetzen&lt;/h2&gt;
+&lt;p&gt;Der letzte Punkt ist easy&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Wir müssen unsere Doppelseiten zu einer einzigen Pdf machen.&lt;/p&gt;
+&lt;p&gt;Ich hab dafür &lt;a href=&#34;https://wiki.ubuntuusers.de/poppler-utils/&#34;&gt;pdfunite&lt;/a&gt; genutzt. Das Programm ist für die Linux cli, aber wenn du hier angekommen bist und bis hierher gelesen hast ist das wahrscheinlich sowieso das was du willst.&lt;br&gt;
+Wenn nicht, gibts bestimmt auch schöne grafische Tools für andere Betriebssysteme.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Mit &lt;code&gt;pdfunite&lt;/code&gt; jedenfalls, in das Verzeichnis mit den Pdfs navigiert, ist es einfach ein&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pdfunite * ../output.pdf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;und ihr findet die fertige Pdf im übergeordneten Verzeichnis.&lt;br&gt;
+Natürlich wollt ihr die Einzeldateien dabei in der richtigen Reihenfolge haben - aber die werden richtig vom Scanner abgelegt, das sollte also kein Problem sein.&lt;/p&gt;
+&lt;h2 id=&#34;pdf-veröffentlichen&#34;&gt;Pdf veröffentlichen&lt;/h2&gt;
+&lt;p&gt;Je nachdem, wie die rechtlichen Gegebenheiten in eurem Land so sind, möchtet ihr das gescannte Buch, im Sinne von freiem Wissen für alle, veröffentlichen&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+Ein guter Kandidat ist zur Zeit (mitte 2022) das Library Genesis Project, &amp;ldquo;&lt;a href=&#34;http://libgen.rs/&#34;&gt;libgen&lt;/a&gt;&amp;rdquo;. Die Domain wechselt ab und zu - falls dieser Link tot ist, sucht einfach mal danach.&lt;/p&gt;
+&lt;p&gt;Die haben dort sogar eine &lt;a href=&#34;https://wiki.mhut.org/content:how_to_upload&#34;&gt;Anleitung&lt;/a&gt;, wie man dort neue Dateien hochlädt.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;auf einem Linux System&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Falls ihr zum Zusammensetzen einen Webservice benutzt habt, und die Datei veröffentlichen wollt, checkt evtl mal die Metadaten der erzeugten Pdf, ob da was drin steht, dass ihr nicht haben wollt..!&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Je nach den rechtlichen Gegebenheiten in eurem Land wollt ihr dazu vielleicht auch in einem öffentlichen Wlan sein. Vielleicht ein Freifunk, oder im Wlan von einem Cafe..?&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
       <title>DIY Regal</title>
       <link>//puhoy.github.io/posts/2022-02-13_diy_regal/</link>
       <pubDate>Sun, 13 Feb 2022 13:10:44 +0100</pubDate>
