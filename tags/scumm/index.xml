@@ -10,9 +10,9 @@
     <atom:link href="//puhoy.github.io/tags/scumm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bücher scannen</title>
-      <link>//puhoy.github.io/posts/2022-07-04_buecher_scannen/</link>
+      <link>//puhoy.github.io/posts/2022-08-28_buecher_scannen/</link>
       <pubDate>Sat, 27 Aug 2022 21:31:39 +0200</pubDate>
-      <guid>//puhoy.github.io/posts/2022-07-04_buecher_scannen/</guid>
+      <guid>//puhoy.github.io/posts/2022-08-28_buecher_scannen/</guid>
       <description>&lt;p&gt;Ein kurzes Runterschreib zum Bücher scannen!&lt;/p&gt;
 &lt;p&gt;Ich wollte neulich ein Buch scannen, ohne jegliches Vorwissen.&lt;/p&gt;
 &lt;p&gt;Mein erster Gedanke war: Handyfotos, Pythonscript um die Kanten zu erkennen, Tesseract zur Texterkennung der fertigen pdf.&lt;br&gt;
@@ -421,10 +421,12 @@ set $menu dmenu_path | $menu_command | xargs swaymsg exec
       <pubDate>Fri, 13 Sep 2019 20:04:27 +0200</pubDate>
       <guid>//puhoy.github.io/posts/releasing_on_pypi/</guid>
       <description>&lt;p&gt;some notes on packaging &amp;amp; releasing python modules on pypi&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;update&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2022&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;08&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;28&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;releasing on testpypi&amp;#34;&lt;/span&gt;: incluce the &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;extra&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;index&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;url&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;building your distribution&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;build&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt; instead of &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;setup.py sdist bdist_wheel&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example-project-structure&#34;&gt;example project structure&lt;/h2&gt;
+&lt;p&gt;update 2022-08-28:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;releasing on testpypi&amp;rdquo;: incluce the &lt;code&gt;extra-index-url&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;building your distribution&amp;rdquo;: use &lt;code&gt;build&lt;/code&gt; instead of &lt;code&gt;setup.py sdist bdist_wheel&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example-project-structure&#34;&gt;example project structure&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mypackage
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mypackage
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        module1
@@ -560,8 +562,11 @@ just put a &lt;code&gt;.bumpversion.cfg&lt;/code&gt; in the root of your project
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;replace = version=&amp;#39;{new_version}&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;actual-releasing-on-pypi&#34;&gt;actual releasing on pypi&lt;/h2&gt;
 &lt;h3 id=&#34;building-your-distribution&#34;&gt;building your distribution&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;update&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2022&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;08&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;28&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;setup.py bdist_wheel&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt; does &lt;span style=&#34;color:#ff79c6&#34;&gt;not&lt;/span&gt; work anymore, &lt;span style=&#34;color:#ff79c6&#34;&gt;and&lt;/span&gt; the official docs are updated &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;build&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;, so i updated this &lt;span style=&#34;color:#ff79c6&#34;&gt;as&lt;/span&gt; well. (&lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; [docs](https:&lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt;packaging.python.org&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;en&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;latest&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;guides&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;distributing&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;packages&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;using&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;setuptools&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;#packaging-your-project))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;building the dist packages needs the &lt;code&gt;build&lt;/code&gt; package, so if you havent done that already, install it with&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;update 2022-08-28:&lt;br&gt;
+&lt;code&gt;setup.py bdist_wheel&lt;/code&gt; does not work anymore, and the official docs are updated to use &lt;code&gt;build&lt;/code&gt;, so i updated this as well. (-&amp;gt; &lt;a href=&#34;https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#packaging-your-project&#34;&gt;docs&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;building the dist packages needs the &lt;code&gt;build&lt;/code&gt; package, so if you havent done that already, install it with&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install build --user
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;then, create a sdist distribution (basically just the sources) and a wheel (a &amp;ldquo;built&amp;rdquo; package):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python -m build

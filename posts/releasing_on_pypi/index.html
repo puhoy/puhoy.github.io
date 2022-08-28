@@ -11,7 +11,7 @@
 <meta itemprop="name" content="publishing on pypi">
 <meta itemprop="description" content="some notes on packaging &amp; releasing python modules on pypi"><meta itemprop="datePublished" content="2019-09-13T20:04:27+02:00" />
 <meta itemprop="dateModified" content="2019-09-13T20:04:27+02:00" />
-<meta itemprop="wordCount" content="717">
+<meta itemprop="wordCount" content="715">
 <meta itemprop="keywords" content="pypi,pip,twine,bumpversion,setup.py,snippets," />
 <meta property="og:title" content="publishing on pypi" />
 <meta property="og:description" content="some notes on packaging &amp; releasing python modules on pypi" />
@@ -91,10 +91,12 @@
 </header>
 
   <p>some notes on packaging &amp; releasing python modules on pypi</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#ff79c6">update</span> <span style="color:#bd93f9">2022</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">08</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">28</span>:
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">-</span> <span style="color:#f1fa8c">&#34;releasing on testpypi&#34;</span>: incluce the <span style="color:#ff79c6">`</span>extra<span style="color:#ff79c6">-</span><span style="color:#ff79c6">index</span><span style="color:#ff79c6">-</span>url<span style="color:#ff79c6">`</span> 
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">-</span> <span style="color:#f1fa8c">&#34;building your distribution&#34;</span>: <span style="color:#ff79c6">use</span> <span style="color:#ff79c6">`</span>build<span style="color:#ff79c6">`</span> instead of <span style="color:#ff79c6">`</span>setup.py sdist bdist_wheel<span style="color:#ff79c6">`</span>
-</span></span></code></pre></div><h2 id="example-project-structure">example project structure</h2>
+<p>update 2022-08-28:</p>
+<ul>
+<li>&ldquo;releasing on testpypi&rdquo;: incluce the <code>extra-index-url</code></li>
+<li>&ldquo;building your distribution&rdquo;: use <code>build</code> instead of <code>setup.py sdist bdist_wheel</code></li>
+</ul>
+<h2 id="example-project-structure">example project structure</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mypackage
 </span></span><span style="display:flex;"><span>    mypackage
 </span></span><span style="display:flex;"><span>        module1
@@ -230,8 +232,11 @@ just put a <code>.bumpversion.cfg</code> in the root of your project, and bump y
 </span></span><span style="display:flex;"><span>replace = version=&#39;{new_version}&#39;
 </span></span></code></pre></div><h2 id="actual-releasing-on-pypi">actual releasing on pypi</h2>
 <h3 id="building-your-distribution">building your distribution</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#ff79c6">update</span> <span style="color:#bd93f9">2022</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">08</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">28</span>: <span style="color:#ff79c6">`</span>setup.py bdist_wheel<span style="color:#ff79c6">`</span> does <span style="color:#ff79c6">not</span> work anymore, <span style="color:#ff79c6">and</span> the official docs are updated <span style="color:#ff79c6">to</span> <span style="color:#ff79c6">use</span> <span style="color:#ff79c6">`</span>build<span style="color:#ff79c6">`</span>, so i updated this <span style="color:#ff79c6">as</span> well. (<span style="color:#ff79c6">-&gt;</span> [docs](https:<span style="color:#ff79c6">//</span>packaging.python.org<span style="color:#ff79c6">/</span>en<span style="color:#ff79c6">/</span>latest<span style="color:#ff79c6">/</span>guides<span style="color:#ff79c6">/</span>distributing<span style="color:#ff79c6">-</span>packages<span style="color:#ff79c6">-</span><span style="color:#ff79c6">using</span><span style="color:#ff79c6">-</span>setuptools<span style="color:#ff79c6">/</span><span style="color:#6272a4">#packaging-your-project))
-</span></span></span></code></pre></div><p>building the dist packages needs the <code>build</code> package, so if you havent done that already, install it with</p>
+<blockquote>
+<p>update 2022-08-28:<br>
+<code>setup.py bdist_wheel</code> does not work anymore, and the official docs are updated to use <code>build</code>, so i updated this as well. (-&gt; <a href="https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#packaging-your-project">docs</a>)</p>
+</blockquote>
+<p>building the dist packages needs the <code>build</code> package, so if you havent done that already, install it with</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pip install build --user
 </span></span></code></pre></div><p>then, create a sdist distribution (basically just the sources) and a wheel (a &ldquo;built&rdquo; package):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>python -m build
